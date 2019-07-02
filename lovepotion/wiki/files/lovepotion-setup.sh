@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 ## Version 1.0.2
 
 ## Something something write perms
