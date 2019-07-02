@@ -15,6 +15,7 @@ One can load a system font using the follwing names in place of the path paramet
 |korean|Korean font|
 |taiwanese|Taiwanese font|
 
+
 - `love.graphics.set3D(enable)` enable or disable 3D with `true` or `false`
 - `love.graphics.setDepth(depth)` set the 3D depth
 - `love.graphics.setScreen(screen)` set the screen to render to: `"top"` or `"bottom"`
