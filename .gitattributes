@@ -5,6 +5,7 @@
 *.md text eol=lf
 *.css text eol=lf
 *.js text eol=lf
+*.sh text eol=lf
 
 # Jekyll related files
 *.yml text eol=lf
