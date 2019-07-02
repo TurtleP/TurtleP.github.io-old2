@@ -10,14 +10,15 @@ Follow the instructions for [setting up a development environment](building?id=g
 
 ### Foreword
 
-When you run Löve Potion by itself, it will first try to locate a game within its own *RomFS*, a read-only filesystem. If you did not build your game with the [template](https://github.com/TurtleP/LovePotion-examples/tree/master/templates/) for standalone usage (useful for custom metadata), it will default to using the 'Game Folder'. If it fails to locate that, it will show the 'No Game' screen.
+When you run Löve Potion by itself, it will first try to locate a game within its own *RomFS*, a read-only filesystem. If you did not build your game with the provided templates for standalone usage (useful for custom metadata), it will default to using the 'Game Folder'. If it fails to locate that, it will show the 'No Game' screen.
 
 Make sure you keep your Löve Potion projects in an easy-to-remember directory. Do ***not*** put any of the Löve Potion data, your games ***or*** other binaries within the `devkitPro` folder. Keep it on your Desktop or even on cloud storage, like Dropbox.
 
 ### Environment Setup
 
-Mentioned before, go to the [examples repo for the template](https://github.com/TurtleP/LovePotion-examples/tree/master/templates). Next, download [the environment setup](/LovePotion/wiki/files/lovepotion.zip ':ignore') and unzip it to your **_home_** directory. This is typically under the directory known as `~`. Once complete, run `~/.lovepotion/scripts/setup.sh`. This file will append the two environment variables you need to your `.bashrc` file. After that is completed, grab the [latest *.elf binary](https://github.com/TurtleP/LovePotion/releases) and place it under your home directory inside the `.lovepotion` folder. Each elf file must be named specifically.
-If using the 3DS version, name the elf file `3ds.elf`, and for Switch, `switch.elf`
+To begin, download the [environment setup script](/lovepotion/wiki/files/setup.sh ':ignore'). In your terminal, run `./setup.sh`. This will write the environment variable data to `/etc/profile.d/lovepotion-env.sh`.
+
+Next, download either the [Nintendo 3DS](/lovepotion/wiki/files/3ds-template.zip ':ignore') or [Nintendo Switch](/lovepotion/wiki/files/switch-template.sh ':ignore') templates. After that, grab the [latest *.elf binary](https://github.com/TurtleP/LovePotion/releases) and place it under your home directory inside the `.lovepotion` folder under your HOME directory (`~/.lovepotion`). Each elf file must be named specifically. If using the 3DS version, name the elf file `3ds.elf`, and for Switch, `switch.elf`
 
 ### Löve Potion Executable
 
@@ -29,7 +30,7 @@ Creating your {game}.lpx file is extremely simple. Open your terminal and naviga
 build_romfs SuperGame SuperGame.lpx
 ```
 
-This will package the content of *SuperGame* inside its own lpx file. Having built that, [download the file association zip](/LovePotion/wiki/files/config.zip ':ignore'). Copy the `lovepotion.cfg` file to your Switch [µSD card](https://simple.wikipedia.org/wiki/MicroSD) under `/nx-hbmenu/config/fileassoc`. The `LovePotion` folder can be placed under `/switch`. The only thing missing is the latest copy of Löve Potion, so download the [latest *.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `LovePotion` folder.
+This will package the content of *SuperGame* inside its own lpx file. Having built that, [download the file association zip](/lovepotion/wiki/files/config.zip ':ignore'). Copy the `lovepotion.cfg` file to your Switch [µSD card](https://simple.wikipedia.org/wiki/MicroSD) under `/nx-hbmenu/config/fileassoc`. The `LovePotion` folder can be placed under `/switch`. The only thing missing is the latest copy of Löve Potion, so download the [latest *.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `LovePotion` folder.
 
 All that's left is to copy the new *SuperGame.lpx* to the `/switch` folder on your µSD card and open the Homebrew Menu. It will now show up as an entry that you can run.
 
