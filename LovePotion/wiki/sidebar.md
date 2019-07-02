@@ -1,0 +1,11 @@
+- **Main**
+- [Home](/)
+- [Building Löve Potion](building)
+- [Compatibility](compatability)
+- [Game Distribution](packaging)
+- **Other**
+- [FAQ](faq)
+- [Showcase](showcase)
+- [Credits](credits)
+- **Community**
+- [![Discord](https://icongr.am/simple/discord.svg?colored&size=16) Discord Server](https://discord.gg/ggbKkhc)
