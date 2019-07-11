@@ -1,1 +1,0 @@
-?> Regardless of the method used, please use Atmosphère's title takeover functionality. This allows for your game to use all the system memory allowed along with the Software Keyboard. Löve Potion will know if the application is running under the Album or other any other 'applet' and *will* throw an error.
