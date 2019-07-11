@@ -6,9 +6,7 @@ It would be rather tedious for me to list out everything that *is* compatable, b
 
 ## 3DS functions
 
-?> Custom fonts are loaded in via a *.bcfnt file. Do not use a *.ttf. A tool for converting *.ttf files to this new format will be provided in the future by devkitPro.
-
-- `love.graphics.newFont(path, size)` will take the path to a *.bcfnt file, and `size` for the scale. Alternatively, one can load a system font using the follwing names in place of the path parameter:
+One can load a system font using the follwing names in place of the path parameter for `love.graphics.newFont`:
 
 |Name|Notes|
 |----|-----------|
@@ -17,17 +15,34 @@ It would be rather tedious for me to list out everything that *is* compatable, b
 |korean|Korean font|
 |taiwanese|Taiwanese font|
 
+
 - `love.graphics.set3D(enable)` enable or disable 3D with `true` or `false`
 - `love.graphics.setDepth(depth)` set the 3D depth
 - `love.graphics.setScreen(screen)` set the screen to render to: `"top"` or `"bottom"`
 
 ## System Functions
 
-- `love.system.hasInternet()` returns whether or not the system has an internet connection*
-- `love.system.getRegion()` returns the region of the system (USA, Japan, etc.)
-- `love.system.getUsername()` returns the name of the user running Löve Potion (or your game)
+- `love.system.getInternetStatus()` 
+    - Returns whether or not the system has an internet connection
+        - On Nintendo Switch, you can specify `ethernet` or `wireless` (default)
+- `love.system.getRegion()` 
+    - Returns the region of the system (USA, Japan, etc.)
+- `love.system.getUsername()` 
+    - Returns the name of the user running Löve Potion (or your game)
 
-*not yet implemented
+## Software Keyboard
+
+Calling `love.keyboard.setTextInput` brings up the System Software Keyboard applet. Pass a table to configure it:
+
+| Config | Notes |
+|--------|--------|
+| type |  basic, numpad, and standard<sup>1</sup>|
+| isPassword | makes the text hidden after entry |
+| header<sup>1</sup> | Header to display |
+| subheader<sup>1</sup> | Sub-header to display |
+| hint | Text to prompt for on the input |
+
+<sup>1</sup> Nintendo Switch only
 
 ## Gamepad Constants
 
