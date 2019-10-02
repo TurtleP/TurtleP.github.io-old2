@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Making a Move
 subtitle: finally on my own
 date: '2019-10-01'
