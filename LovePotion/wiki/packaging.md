@@ -19,7 +19,7 @@ Make sure you keep your Löve Potion projects in an easy-to-remember directory. 
 To begin, download the [environment setup script](/LovePotion/wiki/files/lovepotion-setup.sh ':ignore'). In your terminal, run `lovepotion-setup.sh`. This will write the environment variable data to `/etc/profile.d/lovepotion-env.sh`. You may need to restart the terminal for the variables to show up. Some shells (e.g. zsh) don't read this directory, and you must source the file yourself in
 the proper file (e.g. for zsh, `~/.zshrc`).
 
-Next, download either the [Nintendo 3DS](/LovePotion/wiki/files/3ds-template.zip ':ignore') or [Nintendo Switch](/LovePotion/wiki/files/switch-template.sh ':ignore') templates. After that, grab the [latest *.elf binary](https://github.com/TurtleP/LovePotion/releases) and place it under your home directory inside the `.lovepotion` folder under your HOME directory (`~/.lovepotion`). Each elf file must be named specifically. If using the 3DS version, name the elf file `3ds.elf`, and for Switch, `switch.elf`
+Next, download either the [Nintendo 3DS](/LovePotion/wiki/files/3ds-template.zip ':ignore') or [Nintendo Switch](/LovePotion/wiki/files/switch-template.zip ':ignore') templates. After that, grab the [latest *.elf binary](https://github.com/TurtleP/LovePotion/releases) and place it under your home directory inside the `.lovepotion` folder under your HOME directory (`~/.lovepotion`). Each elf file must be named specifically. If using the 3DS version, name the elf file `3ds.elf`, and for Switch, `switch.elf`
 
 ### Löve Potion Executable
 
