@@ -34,30 +34,28 @@ sudo (dkp-)pacman -S switch-dev 3ds-dev devkit-env
 
 !> The following information is for development purposes only! Do not build Löve Potion directly if you don't understand programming or are not going to contribute. It only leads to [fragmentation](https://en.wikipedia.org/wiki/Market_fragmentation). If you wish to package your game for distribution, please see [Game Distribution](packaging)
 
+Next, clone the repository. If you are contributing code, [please fork and then clone locally](https://help.github.com/articles/fork-a-repo/). Afterwards, using the terminal, change your directory to where Löve Potion was cloned:
+
+```bash
+cd LovePotion
+```
+
 Install the required portlibs:
 
 <!-- tabs:start -->
 
 #### **Windows (msys2)**
 ```bash
-pacman -S switch-sdl2 switch-sdl2_mixer switch-sdl2_ttf switch-sdl2_image switch-sdl2_gfx switch-libwebp switch-curl 3ds-sdl 3ds-sdl_mixer 3ds-curl
+pacman -S --needed - < pkglist.txt
 ```
 
 #### **Unix-like (Linux, macOS)**
 ```bash
-sudo (dkp-)pacman -S switch-sdl2 switch-sdl2_mixer switch-sdl2_ttf switch-sdl2_image switch-sdl2_gfx switch-libwebp switch-curl 3ds-sdl 3ds-sdl_mixer 3ds-curl
+sudo (dkp-)pacman -S --needed - < pkglist.txt
 ```
 <!-- tabs:end -->
 
-### Compiling
-
-Once everything is set up, simply [fork and clone the repository](https://help.github.com/articles/fork-a-repo/). Afterwards, using the terminal, change your directory to where Löve Potion was cloned:
-
-```bash
-cd LovePotion
-```
-
-and run `make`
+Once everything finishes installing, run `make`. You can specify more jobs to allocate via `make -j{CPU_CORES}` where {CPU_CORES} is the amount of processor cores your CPU has. It is recommended to use MAX_CORES minus one.
 
 ## Pull Requests
 
@@ -76,6 +74,9 @@ else if (otherThing)
     printf("Amazing!");
 else
     printf("Welp");
+
+for (size_t i = 0; i < 10; i++)
+    printf("Count is %zu", i);
 ```
 
 ### Variable & Function Names
@@ -83,15 +84,4 @@ else
 - Variable names should be in camelCase
 - Class names should be in Titlecase
     - Functions should be as CamelCase
-- Lua wrapper functions should be treated like variable names
-- Modules are *namespaces*
-    - Treat their functions like Class functions
-
-### File Structure
-
-- Header (\*.h) files should be placed inside the *include* folder.
-- Source (\*.cpp) files in the *source* folder.
-    - Each LÖVE object has a class header/source file and a Lua wrapper.
-        - Put it under *objects/{object_type}/*
-        - Lua wrapper files must be named as *wrap_{object}*
-    - If the file is for a module, put it under *modules*.
+- Lua wrapper functions should be treated like class Function names

@@ -1,12 +1,26 @@
 !> Löve Potion is a work in progress, so things may be missing. Please open an issue on the [GitHub Repository](https://github.com/TurtleP/LovePotion) if there's a feature you'd like to request.
 
-## Trello Board
+## Drawing
 
-It would be rather tedious for me to list out everything that *is* compatable, but also ***horrible*** for anything that's just specific for Löve Potion. However, I made a [Trello Board](https://trello.com/b/T1FlF1sY/l%C3%B6ve-potion) from the start of making Löve Potion to show everything currently implemented and also upcoming features. It's not a roadmap. Please keep in mind this Trello Board only reflects the Nintendo Switch version. However, the main difference is a larger lack of some graphics functions on 3DS.
+On a Nintendo 3DS, this was a big hurdle. The initial codebase would rely on a call to `love.graphics.setScreen(screen)`. Now this is no longer the case. As of version 2.0.0, the `love.draw` callback has a `screen` parameter. This does not affect the Nintendo Switch version.
 
-## 3DS functions
+For example, if you wish to draw to only *one* screen. You would simply check against the `screen` value that was passed in:
+
+``lua
+function love.draw(screen)
+    if screen == "top" then
+        -- render top screen
+    end
+end
+```
+
+At first glance, it seems a bit odd, right? Well it can be fixed up and dealt with in numerous ways. For more advanced users, one of those is creating a game state tracker which that registers function callbacks based on the screen, saving a lot of effort.
+
+## System Font Loading
 
 One can load a system font using the follwing names in place of the path parameter for `love.graphics.newFont`:
+
+### Nintendo 3DS
 
 |Name|Notes|
 |----|-----------|
@@ -15,20 +29,64 @@ One can load a system font using the follwing names in place of the path paramet
 |korean|Korean font|
 |taiwanese|Taiwanese font|
 
+### Nintendo Switch
 
-- `love.graphics.set3D(enable)` enable or disable 3D with `true` or `false`
-- `love.graphics.setDepth(depth)` set the 3D depth
-- `love.graphics.setScreen(screen)` set the screen to render to: `"top"` or `"bottom"`
+|Name|Notes|
+|----|-----------|
+|standard|JPN, USA, EUR, and AUS regions font|
+|chinese simplified|Simplified Chinese font|
+|chinese traditional|Traditional Chinese font|
+|extended chinese simplified|Extended Simplified Chinese font|
+|korean|Korean font|
+|nintendo extended|Nintendo Extended Symbols font|
 
-## System Functions
+The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
 
-- `love.system.getInternetStatus()` 
+```lua
+local utf8 = require("utf8")
+
+-- get the encoded utf8 of the Play Coin icon
+local glyph = utf8.char("0xE075")
+
+function love.load()
+    -- if we're on Switch, set extended as our current font
+    if love._console_name == "Switch" then
+        love.graphics.setNewFont("nintendo extended", 14)
+    end
+end
+
+function love.draw(screen)
+    -- this will only render on the top
+    -- screen for 3DS and will render on Switch regardless
+    if (screen and screen ~= "top") then
+        return
+    end
+
+    love.graphics.print(glyph)
+end
+```
+
+## Extended System Functions
+
+Since the Nintendo 3DS and Nintendo Switch are a bit different than your traditional LOVE environment, the following `system` module functions were added:
+
+- `love.system.getNetworkStatus()`
     - Returns whether or not the system has an internet connection
-        - On Nintendo Switch, you can specify `ethernet` or `wireless` (default)
-- `love.system.getRegion()` 
-    - Returns the region of the system (USA, Japan, etc.)
-- `love.system.getUsername()` 
+- `love.system.getUsername()`
     - Returns the name of the user running Löve Potion (or your game)
+- `love.system.getLanguage()`
+    - Returns the current System Language as a string
+
+These are especially useful for either UI, netplay, or even multi-language support!
+
+## Console-Only Constants
+
+Both the 3DS and Switch versions of Löve Potion have the following constants:
+
+- `love._console_name`
+    - Returns the name of the console, "3DS" or "Switch"
+- `love._potion_version`
+    - Returns the version of Löve Potion
 
 ## Software Keyboard
 
@@ -38,55 +96,32 @@ Calling `love.keyboard.setTextInput` brings up the System Software Keyboard appl
 |--------|--------|
 | type |  basic, numpad, and standard<sup>1</sup>|
 | isPassword | makes the text hidden after entry |
-| header<sup>1</sup> | Header to display |
-| subheader<sup>1</sup> | Sub-header to display |
 | hint | Text to prompt for on the input |
 
 <sup>1</sup> Nintendo Switch only
 
 ## Gamepad Constants
 
-?> Löve Potion only uses the `love.gamepad*` callbacks for input handling (with the joycon or the 3DS system itself).
+?> Löve Potion only uses the `love.gamepad*` callbacks for input handling (with the joycon or the 3DS system itself). For a list of button names, please see [the official LÖVE wiki](https://love2d.org/wiki/GamepadButton).
 
-### Face Buttons
+### Nintendo 3DS
 
-|Button|Description  |
-|------|-------------|
-|a     | The A button|
-|b     | The B button|
-|y     | The Y button|
-|x     | The X button|
+*TO DO: add graphic*
 
-### Directional Buttons
+### Nintendo Switch
 
-|Button |Description  |
-|-------|-------------|
-|dpup   | D-Pad Up    |
-|dpdown | D-Pad Down  |
-|dpright| D-Pad Right |
-|dpleft | D-Pad Left  |
+*TO DO: add graphic*
 
-### Shoulder Buttons
+## Miscellaneous
 
-|Button|Description    |
-|------|---------------|
-|l     | The L button  |
-|r     | The R button  |
-|zl    | The ZL button |
-|zr    | The ZR button |
+### Nintendo 3DS
 
-### Special Buttons
+The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.setDepth`. Note that this will not have any affect on Nintendo 2DS systems.
 
-#### Nintendo Switch
+## Debugging Your Game
 
-|Button|Description   |
-|------|--------------|
-|plus  | The + button |
-|minus | The - button |
+Debugging Löve Potion games has always been a big pain. We couldn't use the toolchain provided console, especially on Nintendo Switch due to complications. However, it is *highly* advised that users [take a look at lovebird](https://github.com/rxi/lovebird). It's a very useful utility that can debug your game over your local area network.
 
-#### Nintendo 3DS
+!> The following notice may be removed if the root cause is found (as there is 5.2 compatability which should fix coroutines) or the consoles get LuaJIT.
 
-|Button|Description        |
-|------|-------------------|
-|start |The 'start' button |
-|select|The 'select' button|
+**However**, it should be noted that there may be issues due to coroutines. If you run into issues, try setting the time out values to a non-zero value, such as 5. Regarding the coroutines, specifically at lines 661 and 664, you *might* need to comment them out so everything works properly and instead return the value in the argument for the coroutine. For example, line 661 would be `return nil` instead of `coroutine.yield(nil)`.
