@@ -2,7 +2,7 @@
 layout: page
 title: Kingdom of Erlain
 subtitle: A Story of Magic and Dragons
-#bigimg: /img/novel.png
+bigimg: /img/novel.png
 use-site-title: true
 ---
 
