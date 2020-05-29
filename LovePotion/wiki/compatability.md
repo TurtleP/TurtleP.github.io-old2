@@ -6,7 +6,7 @@ On a Nintendo 3DS, this was a big hurdle. The initial codebase would rely on a c
 
 For example, if you wish to draw to only *one* screen. You would simply check against the `screen` value that was passed in:
 
-``lua
+```lua
 function love.draw(screen)
     if screen == "top" then
         -- render top screen
@@ -106,11 +106,11 @@ Calling `love.keyboard.setTextInput` brings up the System Software Keyboard appl
 
 ### Nintendo 3DS
 
-*TO DO: add graphic*
+![](files/3DSControllerMap.png)
 
 ### Nintendo Switch
 
-*TO DO: add graphic*
+![](files/SwitchControllerMap.png)
 
 ## Miscellaneous
 
