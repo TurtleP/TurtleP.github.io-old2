@@ -24,7 +24,7 @@ Grab the [latest *.elf binary](https://github.com/TurtleP/LovePotion/releases) a
 
 Please refer to 'creata a `love` file' [at the official LÖVE wiki](https://love2d.org/wiki/Game_Distribution#Create_a_.love-file).
 
-Once the LÖVE binary is created, [download the file association zip](/lovepotion/wiki/files/config.zip ':ignore'). Copy the `lovepotion.cfg` file to your Switch micro SD card under `/nx-hbmenu/config/fileassoc`. The `LovePotion` folder can be placed under `/switch`. The only thing missing is the latest copy of Löve Potion, so download the [latest *.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `LovePotion` folder.
+Once the LÖVE binary is created, [download the file association zip](files/config.zip ':ignore'). Copy the `lovepotion.cfg` file to your Switch micro SD card under `/nx-hbmenu/config/fileassoc`. The `LovePotion` folder can be placed under `/switch`. The only thing missing is the latest copy of Löve Potion, so download the [latest *.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `LovePotion` folder.
 
 All that's left is to copy the new *SuperGame.love* file to the `/switch` folder on your micro SD card and open the Homebrew Menu. It will now show up as an entry that you can run.
 
