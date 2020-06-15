@@ -18,23 +18,13 @@ Make sure you keep your Löve Potion projects in an easy-to-remember directory. 
 
 Grab the [latest *.elf binary](https://github.com/TurtleP/LovePotion/releases) and place it under your home directory inside the `.lovepotion` folder under your HOME directory (`~/.lovepotion`). Each elf file must be named specifically. If using the 3DS version, name the elf file `3ds.elf`, and for Switch, `switch.elf`
 
-### LÖVE Executable
-
-!> This method does not apply to the Nintendo 3DS version.
-
-Please refer to 'creata a `love` file' [at the official LÖVE wiki](https://love2d.org/wiki/Game_Distribution#Create_a_.love-file).
-
-Once the LÖVE binary is created, [download the file association zip](files/config.zip ':ignore'). Copy the `lovepotion.cfg` file to your Switch micro SD card under `/nx-hbmenu/config/fileassoc`. The `LovePotion` folder can be placed under `/switch`. The only thing missing is the latest copy of Löve Potion, so download the [latest *.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `LovePotion` folder.
-
-All that's left is to copy the new *SuperGame.love* file to the `/switch` folder on your micro SD card and open the Homebrew Menu. It will now show up as an entry that you can run.
-
-### Fused Game
+### LöveBrew Application
 
 !> Make sure you have python3 installed before you proceed! The application does **not** work on python2.
 
 Clone the [repository for `lovebrew`](https://github.com/TurtleP/lovebrew). Please read the readme as well for proper installation and usage instructions.
 
-One the application is installed, copy `lovebrew.toml` to your project directory. Your directory structure should look something like the following:
+One the application is installed, run `lovebrew --init` in your project directory. Your directory structure should look something like the following:
 
 ```
 ├── SuperGame
@@ -49,9 +39,19 @@ On Nintendo 3DS, create a 48x48 png image. For the Nintendo Switch version, the 
 
 #### Custom Metadata
 
-Edit the `lovebrew.toml` file in your game's directory. The metadata fields are self-explanatory and will be used when compiling the project.
+Edit the `lovebrew.toml` file in the directory. Read the comments for specific details on each item. Once done, run `lovebrew`.
 
 Copy the newly built *SuperGame.(nro/3dsx)* to the micro SD card under `/switch` (or `/3ds`) and it will show up as an entry once you open the Homebrew Menu.
+
+### LÖVE Executable
+
+!> This method does not apply to the Nintendo 3DS version.
+
+Please refer to 'creata a `love` file' [at the official LÖVE wiki](https://love2d.org/wiki/Game_Distribution#Create_a_.love-file).
+
+Once the LÖVE binary is created, [download the file association zip](files/config.zip ':ignore'). Copy the `lovepotion.cfg` file to your Switch micro SD card under `/nx-hbmenu/config/fileassoc`. The `LovePotion` folder can be placed under `/switch`. The only thing missing is the latest copy of Löve Potion, so download the [latest *.nro binary](https://github.com/TurtleP/LovePotion/releases) and place it in the `LovePotion` folder.
+
+All that's left is to copy the new *SuperGame.love* file to the `/switch` folder on your micro SD card and open the Homebrew Menu. It will now show up as an entry that you can run.
 
 ### 'Game' Folder
 
