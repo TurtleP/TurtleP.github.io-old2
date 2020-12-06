@@ -18,6 +18,8 @@ end
 
 Currently the `screen` parameter can be one of three strings: `left` , `right` , and `bottom` . The first two correspond with the screens on the top, so that one could use the 3D depth functionality.
 
+Additionally, textures (such as png or jpg files) must be converted to the t3x format on Nintendo 3DS using `tex3ds`. It is provided with devkitpro-pacman, see [Setting up a Development Environment](https://turtlep.github.io/LovePotion/wiki/#/packaging?id=prerequisite) for more details.
+
 ## System Font Loading
 
 One can load a system font using the follwing names in place of the path parameter for `love.graphics.newFont` :
@@ -42,7 +44,7 @@ One can load a system font using the follwing names in place of the path paramet
 | korean                      | Korean font                         |
 | nintendo extended           | Nintendo Extended Symbols font      |
 
-The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
+It is important to note that for custom fonts you must convert your TrueType or OpenType font to bfnt using `mkbcfnt`. It is provided with devkitpro-pacman, see [Setting up a Development Environment](https://turtlep.github.io/LovePotion/wiki/#/packaging?id=prerequisite) for more details. The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
 
 ``` lua
 local utf8 = require("utf8")
