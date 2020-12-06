@@ -2,47 +2,49 @@
 
 ## Drawing
 
-On a Nintendo 3DS, this was a big hurdle. The initial codebase would rely on a call to `love.graphics.setScreen(screen)`. Now this is no longer the case. As of version 2.0.0, the `love.draw` callback has a `screen` parameter. This does not affect the Nintendo Switch version.
+!> Prior to the full, stable release of 2.0.0, the strings were simply `top` and `bottom` . This was changed due to 3D depth functionality changes with the final release.
+
+On a Nintendo 3DS, this was a big hurdle. The initial codebase would rely on a call to `love.graphics.setScreen(screen)` . Now this is no longer the case. As of version 2.0.0, the `love.draw` callback has a `screen` parameter. This does not affect the Nintendo Switch version.
 
 For example, if you wish to draw to only *one* screen. You would simply check against the `screen` value that was passed in:
 
-```lua
+``` lua
 function love.draw(screen)
-    if screen == "top" then
+    if screen ~= "bottom" then
         -- render top screen
     end
 end
 ```
 
-At first glance, it seems a bit odd, right? Well it can be fixed up and dealt with in numerous ways. For more advanced users, one of those is creating a game state tracker which that registers function callbacks based on the screen, saving a lot of effort.
+Currently the `screen` parameter can be one of three strings: `left` , `right` , and `bottom` . The first two correspond with the screens on the top, so that one could use the 3D depth functionality.
 
 ## System Font Loading
 
-One can load a system font using the follwing names in place of the path parameter for `love.graphics.newFont`:
+One can load a system font using the follwing names in place of the path parameter for `love.graphics.newFont` :
 
 ### Nintendo 3DS
 
-|Name|Notes|
-|----|-----------|
-|standard|JPN, USA, EUR, and AUS regions font|
-|chinese|Chinese font|
-|korean|Korean font|
-|taiwanese|Taiwanese font|
+| Name      | Notes                               |
+|-----------|-------------------------------------|
+| standard  | JPN, USA, EUR, and AUS regions font |
+| chinese   | Chinese font                        |
+| korean    | Korean font                         |
+| taiwanese | Taiwanese font                      |
 
 ### Nintendo Switch
 
-|Name|Notes|
-|----|-----------|
-|standard|JPN, USA, EUR, and AUS regions font|
-|chinese simplified|Simplified Chinese font|
-|chinese traditional|Traditional Chinese font|
-|extended chinese simplified|Extended Simplified Chinese font|
-|korean|Korean font|
-|nintendo extended|Nintendo Extended Symbols font|
+| Name                        | Notes                               |
+|-----------------------------|-------------------------------------|
+| standard                    | JPN, USA, EUR, and AUS regions font |
+| chinese simplified          | Simplified Chinese font             |
+| chinese traditional         | Traditional Chinese font            |
+| extended chinese simplified | Extended Simplified Chinese font    |
+| korean                      | Korean font                         |
+| nintendo extended           | Nintendo Extended Symbols font      |
 
 The Standard font on Nintendo 3DS holds the glyph data for various symbols, like the Play Coin icon. However, these glyphs are stored in the Nintendo Extended Symbols font on Nintendo Switch. Here is a basic example:
 
-```lua
+``` lua
 local utf8 = require("utf8")
 
 -- get the encoded utf8 of the Play Coin icon
@@ -70,11 +72,11 @@ end
 
 Since the Nintendo 3DS and Nintendo Switch are a bit different than your traditional LOVE environment, the following `system` module functions were added:
 
-- `love.system.getNetworkStatus()`
+* `love.system.getNetworkStatus()`
     - Returns whether or not the system has an internet connection
-- `love.system.getUsername()`
+* `love.system.getUsername()`
     - Returns the name of the user running Löve Potion (or your game)
-- `love.system.getLanguage()`
+* `love.system.getLanguage()`
     - Returns the current System Language as a string
 
 These are especially useful for either UI, netplay, or even multi-language support!
@@ -83,20 +85,20 @@ These are especially useful for either UI, netplay, or even multi-language suppo
 
 Both the 3DS and Switch versions of Löve Potion have the following constants:
 
-- `love._console_name`
+* `love._console_name`
     - Returns the name of the console, "3DS" or "Switch"
-- `love._potion_version`
+* `love._potion_version`
     - Returns the version of Löve Potion
 
 ## Software Keyboard
 
 Calling `love.keyboard.setTextInput` brings up the System Software Keyboard applet. Pass a table to configure it:
 
-| Config | Notes |
-|--------|--------|
-| type |  basic, numpad, and standard<sup>1</sup>|
-| isPassword | makes the text hidden after entry |
-| hint | Text to prompt for on the input |
+| Config     | Notes                                   |
+|------------|-----------------------------------------|
+| type       | basic, numpad, and standard<sup>1</sup> |
+| isPassword | makes the text hidden after entry       |
+| hint       | Text to prompt for on the input         |
 
 <sup>1</sup> Nintendo Switch only
 
@@ -116,12 +118,59 @@ Calling `love.keyboard.setTextInput` brings up the System Software Keyboard appl
 
 ### Nintendo 3DS
 
-The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.setDepth`. Note that this will not have any affect on Nintendo 2DS systems.
+!> Stereoscopic depth is not available Nintendo 2DS family systems and will always return zero. If you wish to test 3D depth, consider finding someone who has a 3DS system to help out.
+
+The Nintendo 3DS has stereoscopic 3D--it allows for the use of 3D effects on its top screen without 3D glasses. To control this, use `love.graphics.getStereoscopicDepth()`. This will return the 3D slider's current value, which is in the range of zero to one. One way for this to work is through this example:
+
+``` lua
+local str, font = "Hello World", nil
+local textDepth = 6
+function love.load()
+    font = love.graphics.getFont()
+end
+
+function love.draw(screen)
+    if screen == "bottom" then
+        return
+    end
+
+    local sysDepth = -love.graphics.getStereoscopicDepth()
+
+    if screen == "right" then
+        sysDepth = -sysDepth
+    end
+
+    local left = math.floor(0.5 * (400 - font:getWidth(str)))
+    love.graphics.print("Hello World", left - sysDepth * textDepth, 120)
+end
+```
 
 ## Debugging Your Game
 
-Debugging Löve Potion games has always been a big pain. We couldn't use the toolchain provided console, especially on Nintendo Switch due to complications. However, it is *highly* advised that users [take a look at lovebird](https://github.com/rxi/lovebird). It's a very useful utility that can debug your game over your local area network.
+?> Wondering why this section got updated? [Check out the FAQ](faq?id=why-did-it-take-so-long-for-game-debugging)!
 
-!> The following notice may be removed if the root cause is found (as there is 5.2 compatability which should fix coroutines) or the consoles get LuaJIT.
+Debugging Löve Potion games has always been a big pain. We couldn't use the toolchain provided console, especially on Nintendo Switch due to complications. However, users can now use `nxlink` on Switch and even the 3DS's gdb debugger for output of `print` . Simply enable the console flag inside of your [ `conf.lua` ](https://love2d.org/wiki/Config_Files)!
 
-**However**, it should be noted that there may be issues due to coroutines. If you run into issues, try setting the time out values to a non-zero value, such as 5. Regarding the coroutines, specifically at lines 661 and 664, you *might* need to comment them out so everything works properly and instead return the value in the argument for the coroutine. For example, line 661 would be `return nil` instead of `coroutine.yield(nil)`.
+### Nintendo 3DS
+
+This is a little more involved and advanced, but developers will be required to follow [setting up a development environment](building?id=getting-started). Once devkitpro-pacman is installed, install the 3DS gdb components:
+
+<!-- tabs:start -->
+
+#### **Windows (msys2)**
+
+``` bash
+pacman -S devkitARM-gdb
+```
+
+#### **Unix-like (Linux, macOS)**
+
+``` bash
+sudo (dkp-)pacman -S devkitARM-gdb
+```
+
+Once this is installed, go to the hbmenu. Run the rosalina menu combo (default `L + R + Down + Select` ) and enter "debugger options" and then press `a` on "Enable Debugger". Take note of the IP and port that is assigned to the debugger! Press `b` to go back and select "Force-debug next application at launch". Select LÖVE Potion, then in your terminal, type `/opt/devkitpro/devkitARM/bin/arm-none-eabi-gdb` and hit enter. Next, `target remote ip:port` , where the IP and port are from the debugger's information from before. Debugging will begin and any `print` calls ran will output to this terminal's window.
+
+### Nintendo Switch
+
+Since `nxlink` comes with the `switch-tools` package, all that's required it to load the netsender in hbmenu by pressing `y` and in the terminal running `nxlink -s path/to/nro` . The Switch will receive the nro and immediately run it once it's fully downloaded. Any `print` calls ran will output to this terminal's window.
