@@ -52,11 +52,13 @@
 
 ## Types
 
+<br>
+
 ### Object
 
 **_The superclass of all LÖVE types_**
 
-## Functions
+### Functions
 
 | Name    | Description                                     |
 |---------|-------------------------------------------------|
