@@ -52,8 +52,6 @@
 
 ## Types
 
-<br>
-
 ### Object
 
 **_The superclass of all LÖVE types_**

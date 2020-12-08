@@ -20,8 +20,6 @@
 
 ## Types
 
-<br>
-
 ### Data
 
 **_The superclass of all data. Cannot be instantiated normally._**

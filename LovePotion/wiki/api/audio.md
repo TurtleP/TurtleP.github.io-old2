@@ -17,8 +17,6 @@
 
 ## Types
 
-<br>
-
 ### Source
 
 **_A Source represents audio you can play back. The source is internally referenced as long as it is playing._**
