@@ -32,9 +32,9 @@ sudo (dkp-)pacman -S switch-dev 3ds-dev devkit-env
 ```
 <!-- tabs:end -->
 
-!> The following information is for development purposes only! Do not build Löve Potion directly if you don't understand programming or are not going to contribute. It only leads to [fragmentation](https://en.wikipedia.org/wiki/Market_fragmentation). If you wish to package your game for distribution, please see [Game Distribution](packaging)
+!> The following information is for development purposes only! Do not build LÖVE Potion directly if you don't understand programming or are not going to contribute. It only leads to [fragmentation](https://en.wikipedia.org/wiki/Market_fragmentation). If you wish to package your game for distribution, please see [Game Distribution](packaging)
 
-Next, clone the repository. If you are contributing code, [please fork and then clone locally](https://help.github.com/articles/fork-a-repo/). Afterwards, using the terminal, change your directory to where Löve Potion was cloned:
+Next, clone the repository. If you are contributing code, [please fork and then clone locally](https://help.github.com/articles/fork-a-repo/). Afterwards, using the terminal, change your directory to where LÖVE Potion was cloned:
 
 ```bash
 cd LovePotion

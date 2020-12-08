@@ -1,14 +1,14 @@
-?> Here is a list of the most Frequently Asked Questions about Löve Potion.
+?> Here is a list of the most Frequently Asked Questions about LÖVE Potion.
 
 ### Can I run my LÖVE game on this?
 
-Running your game without any changes is very unlikely. It's recommended to currently use Löve Potion to make games from the ground up.
+Running your game without any changes is very unlikely. It's recommended to currently use LÖVE Potion to make games from the ground up.
 
 ### Can I help?
 
 Yes, see [Building](building) for more details.
 
-### Löve Potion is missing feature 'x' from LÖVE, and I need it!
+### LÖVE Potion is missing feature 'x' from LÖVE, and I need it!
 
 Well that's great to hear! Please open an issue so that I can keep track of your request. I'll gladly implement what you've asked for, as long as it's feasible.
 
@@ -24,7 +24,7 @@ Stop right there kiddo, this is for Homebrew only. This is not for releasing a r
 
 ### Can this run Mari0?!
 
-You know, if I had a nickel for every time someone asked that since Löve Potion first existed, I'd be pretty darn rich. Now for the actual answer: no. Not yet.
+You know, if I had a nickel for every time someone asked that since LÖVE Potion first existed, I'd be pretty darn rich. Now for the actual answer: no. Not yet.
 
 ### Why did it take so long for game debugging?
 

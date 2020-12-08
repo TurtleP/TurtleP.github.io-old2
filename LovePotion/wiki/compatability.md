@@ -1,4 +1,4 @@
-!> Löve Potion is a work in progress, so things may be missing. Please open an issue on the [GitHub Repository](https://github.com/TurtleP/LovePotion) if there's a feature you'd like to request.
+!> LÖVE Potion is a work in progress, so things may be missing. Please open an issue on the [GitHub Repository](https://github.com/TurtleP/LovePotion) if there's a feature you'd like to request.
 
 ## Drawing
 
@@ -77,7 +77,7 @@ Since the Nintendo 3DS and Nintendo Switch are a bit different than your traditi
 * `love.system.getNetworkStatus()`
     - Returns whether or not the system has an internet connection
 * `love.system.getUsername()`
-    - Returns the name of the user running Löve Potion (or your game)
+    - Returns the name of the user running LÖVE Potion (or your game)
 * `love.system.getLanguage()`
     - Returns the current System Language as a string
 
@@ -85,12 +85,12 @@ These are especially useful for either UI, netplay, or even multi-language suppo
 
 ## Console-Only Constants
 
-Both the 3DS and Switch versions of Löve Potion have the following constants:
+Both the 3DS and Switch versions of LÖVE Potion have the following constants:
 
 * `love._console_name`
     - Returns the name of the console, "3DS" or "Switch"
 * `love._potion_version`
-    - Returns the version of Löve Potion
+    - Returns the version of LÖVE Potion
 
 ## Software Keyboard
 
@@ -106,7 +106,7 @@ Calling `love.keyboard.setTextInput` brings up the System Software Keyboard appl
 
 ## Gamepad Constants
 
-?> Löve Potion only uses the `love.gamepad*` callbacks for input handling (with the joycon or the 3DS system itself). For a list of button names, please see [the official LÖVE wiki](https://love2d.org/wiki/GamepadButton).
+?> LÖVE Potion only uses the `love.gamepad*` callbacks for input handling (with the joycon or the 3DS system itself). For a list of button names, please see [the official LÖVE wiki](https://love2d.org/wiki/GamepadButton).
 
 ### Nintendo 3DS
 
@@ -151,7 +151,7 @@ end
 
 ?> Wondering why this section got updated? [Check out the FAQ](faq?id=why-did-it-take-so-long-for-game-debugging)!
 
-Debugging Löve Potion games has always been a big pain. We couldn't use the toolchain provided console, especially on Nintendo Switch due to complications. However, users can now use `nxlink` on Switch and even the 3DS's gdb debugger for output of `print` . Simply enable the console flag inside of your [ `conf.lua` ](https://love2d.org/wiki/Config_Files)!
+Debugging LÖVE Potion games has always been a big pain. We couldn't use the toolchain provided console, especially on Nintendo Switch due to complications. However, users can now use `nxlink` on Switch and even the 3DS's gdb debugger for output of `print` . Simply enable the console flag inside of your [ `conf.lua` ](https://love2d.org/wiki/Config_Files)!
 
 ### Nintendo 3DS
 
