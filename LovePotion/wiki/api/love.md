@@ -2,24 +2,24 @@
 
 ## Functions
 
-| Name       | Args | Description                                               |
-|------------|------|-----------------------------------------------------------|
-| getVersion |      | Returns the version of LÖVE the app is compatible against |
+| Name       | Description                                               |
+|------------|-----------------------------------------------------------|
+| getVersion | Returns the version of LÖVE the app is compatible against |
 
 <br>
 
 ## Constants
 
-| Name              | Args | Description                                                        |
-|-------------------|------|--------------------------------------------------------------------|
-| _os               |      | Returns the OS this is running, "Horizon"                          |
-| _version          |      | Returns the version of LÖVE the app is compatible against          |
-| _potion_version   |      | Returns the version of LÖVE Potion                                 |
-| _console_name     |      | Returns the console the app is running on, "3DS" or "Switch"       |
-| _version_major    |      | Returns the major version of LÖVE the app is compatible against    |
-| _version_minor    |      | Returns the minor version of LÖVE the app is compatible against    |
-| _version_revision |      | Returns the revision version of LÖVE the app is compatible against |
-| _version_codename |      | Returns the codename of LÖVE the app is compatible against         |
+| Name              Description                                                        |
+|--------------------------------------------------------------------------------------|
+| _os               Returns the OS this is running, "Horizon"                          |
+| _version          Returns the version of LÖVE the app is compatible against          |
+| _potion_version   Returns the version of LÖVE Potion                                 |
+| _console_name     Returns the console the app is running on, "3DS" or "Switch"       |
+| _version_major    Returns the major version of LÖVE the app is compatible against    |
+| _version_minor    Returns the minor version of LÖVE the app is compatible against    |
+| _version_revision Returns the revision version of LÖVE the app is compatible against |
+| _version_codename Returns the codename of LÖVE the app is compatible against         |
 
 <br>
 
