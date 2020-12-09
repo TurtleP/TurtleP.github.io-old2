@@ -19,7 +19,13 @@
 
 ### Source
 
-**_A Source represents audio you can play back. The source is internally referenced as long as it is playing._**
+<b><i>
+A Source represents audio you can play back. The source is internally referenced as long as it is playing.
+
+See also:
+- [love.audio.newSource](https://love2d.org/wiki/love.audio.newSource)
+</b></i>
+
 
 | Name                                                                    | Description                                       | Notes                                                  |
 |-------------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------|

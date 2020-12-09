@@ -34,3 +34,9 @@
 <br>
 
 These functions are also the same for ByteData and DataView objects.
+
+<b><i>
+See also:
+- [love.data.newDataView](https://love2d.org/wiki/love.data.newDataView)
+- [love.data.newByteData](https://love2d.org/wiki/love.data.newByteData)
+</b></i>
