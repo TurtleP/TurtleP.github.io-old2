@@ -11,7 +11,7 @@
 ## Constants
 
 | Name              | Description                                                        |
-|-------------------| -------------------------------------------------------------------|
+|-------------------|--------------------------------------------------------------------|
 | _os               | Returns the OS this is running, "Horizon"                          |
 | _version          | Returns the version of LÖVE the app is compatible against          |
 | _potion_version   | Returns the version of LÖVE Potion                                 |
@@ -58,11 +58,11 @@
 
 ### Functions
 
-| Name    | Description                                     |
-|---------|-------------------------------------------------|
-| release | Immediately destroys the object's Lua reference |
-| type    | Gets the type of the object as a string         |
-| typeof  | Checks whether an object is of a certain type   |
+| Name                                              | Description                                     |
+|---------------------------------------------------|-------------------------------------------------|
+| [release](https://love2d.org/wiki/Object:release) | Immediately destroys the object's Lua reference |
+| [type](https://love2d.org/wiki/Object:type)       | Gets the type of the object as a string         |
+| [typeof](https://love2d.org/wiki/Object:typeof)   | Checks whether an object is of a certain type   |
 
 <br>
 

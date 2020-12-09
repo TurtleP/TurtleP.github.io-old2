@@ -24,6 +24,7 @@ A Source represents audio you can play back. The source is internally referenced
 
 See also:
 - [love.audio.newSource](https://love2d.org/wiki/love.audio.newSource)
+- [Object](api/love?id=Object)
 </b></i>
 
 

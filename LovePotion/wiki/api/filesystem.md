@@ -59,6 +59,7 @@ Represents a file on the filesystem. A function that takes a file path can also 
 
 See also:
 - [love.filesystem.newFile](https://love2d.org/wiki/love.filesystem.newFile)
+- [Object](api/love?id=Object)
 </b></i>
 
 | Name                                                    | Description                                                     | Notes |
@@ -87,6 +88,8 @@ Data representing the contents of a file
 
 See also:
 - [love.filesystem.newFileData](https://love2d.org/wiki/love.filesystem.newFileData)
+- [Data](api/data)
+- [Object](api/love?id=Object)
 </b></i>
 
 | Name                                                         | Description                           | Notes |
