@@ -21,12 +21,11 @@
 
 <b><i>
 A Source represents audio you can play back. The source is internally referenced as long as it is playing.
+</b></i>
 
 See also:
 - [love.audio.newSource](https://love2d.org/wiki/love.audio.newSource)
 - [Object](api/love?id=Object)
-</b></i>
-
 
 | Name                                                                    | Description                                       | Notes                                                  |
 |-------------------------------------------------------------------------|---------------------------------------------------|--------------------------------------------------------|

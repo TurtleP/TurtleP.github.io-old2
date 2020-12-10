@@ -1,5 +1,9 @@
 # love.data
 
+<b><i>
+Provides functionality for creating and transforming data.
+</b></i>
+
 ## Functions
 
 | Name                                                             | Description                                                                                                                               |
@@ -31,12 +35,10 @@
 | getSize    | Gets the Data's size in bytes                     |
 | getString  | Gets the full Data as a string                    |
 
-<br>
-
-These functions are also the same for ByteData and DataView objects.
-
 <b><i>
+These functions are also the same for ByteData and DataView objects.
+</b></i>
+
 See also:
 - [love.data.newDataView](https://love2d.org/wiki/love.data.newDataView)
 - [love.data.newByteData](https://love2d.org/wiki/love.data.newByteData)
-</b></i>

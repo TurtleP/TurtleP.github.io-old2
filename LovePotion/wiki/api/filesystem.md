@@ -56,11 +56,11 @@ Otherwise, it will be under `{CURRENT_DIRECTORY}/save`
 
 <b><i>
 Represents a file on the filesystem. A function that takes a file path can also take a File
+</b></i>
 
 See also:
 - [love.filesystem.newFile](https://love2d.org/wiki/love.filesystem.newFile)
 - [Object](api/love?id=Object)
-</b></i>
 
 | Name                                                    | Description                                                     | Notes |
 |---------------------------------------------------------|-----------------------------------------------------------------|-------|
@@ -85,15 +85,15 @@ See also:
 
 <b><i>
 Data representing the contents of a file
+</b></i>
 
 See also:
 - [love.filesystem.newFileData](https://love2d.org/wiki/love.filesystem.newFileData)
 - [Data](api/data)
 - [Object](api/love?id=Object)
-</b></i>
 
 | Name                                                         | Description                           | Notes |
 |--------------------------------------------------------------|---------------------------------------|-------|
-| [clone](https://love2d.org/wiki/FileDataclone)               | Creates a new copy of the Data object |       |
-| [getFilename](https://love2d.org/wiki/FileDatagetFilename)   | Gets the filename of the FileData     |       |
-| [getExtension](https://love2d.org/wiki/FileDatagetExtension) | Gets the extension of the FileData    |       |
+| [clone](https://love2d.org/wiki/FileData:clone)               | Creates a new copy of the Data object |       |
+| [getFilename](https://love2d.org/wiki/FileData:getFilename)   | Gets the filename of the FileData     |       |
+| [getExtension](https://love2d.org/wiki/FileData:getExtension) | Gets the extension of the FileData    |       |

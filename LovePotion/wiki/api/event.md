@@ -1,8 +1,7 @@
 # love.event
 
 <b><i>
-It is possible to define new events by appending the table `love.handlers`.
-
+It is possible to define new events by appending the table `love.handlers`.<br>
 Such functions can be invoked as usual, via love.event.push using the table index as an argument
 </b></i>
 
