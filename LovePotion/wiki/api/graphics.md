@@ -141,6 +141,8 @@ See also:
 | [getViewport](https://love2d.org/wiki/Quad:getViewport)                   | Gets the current viewport of this Quad                                         |       |
 | [setViewport](https://love2d.org/wiki/Quad:setViewport)                   | Sets the texture coordinates according to a viewport                           |       |
 
+!> On Nintendo 3DS, Text and Font objects (via `love.graphics.print`) have a limit of 512 characters that can be printed at one time. This is due to the tight limitations on the console.
+
 ### Text
 
 <b></i>
