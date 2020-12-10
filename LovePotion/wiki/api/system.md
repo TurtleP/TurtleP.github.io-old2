@@ -14,3 +14,4 @@ Provides access to information about the user's console.
 | getNetworkInfo                                                             | Gets information about the systen's internet status |                                                                                          |
 | getLanguage                                                                | Gets the current set language on the console        |                                                                                          |
 | getUsername                                                                | Gets the current username on the console (or app)   | On Switch, this is determined per-app due to the way games launch with multiple accounts |
+| getVersion                                                                 | Gets the current system firmware version            |                                                                                          |
