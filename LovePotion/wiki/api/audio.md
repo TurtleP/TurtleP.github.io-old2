@@ -1,6 +1,8 @@
 # love.audio
 
-!> There are plans to overhaul the audio module. This won't bring in things like Effects, but it will improve the internal codebase to properly implement some of the missing items.
+<b><i>
+Provides of audio interface for playback/recording sound.
+</b></i>
 
 ## Functions
 
