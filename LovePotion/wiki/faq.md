@@ -2,7 +2,8 @@
 
 ### Can I run my LÖVE game on this?
 
-Running your game without any changes is very unlikely. It's recommended to currently use LÖVE Potion to make games from the ground up.
+Running your game without any changes is possible, but it's recommended to currently use LÖVE Potion to make games from the ground up.<br>
+Take a look at [compatability](compatability) and the API reference on the sidebar to see what may need changing.
 
 ### Can I help?
 
@@ -16,11 +17,18 @@ Well that's great to hear! Please open an issue so that I can keep track of your
 
 !> Please be advised: we do not support the use of custom firmwares other than Atmosphère.
 
-If it's a programming error, feel free to join the Discord community and ask for help! Otherwise, please attach the log file from your device to an issue with the error title.
+If it's a programming error, feel free to join the LÖVE Potion Discord community and ask for help!<br>
+Should you encounter a different error, such as an arm11 (3DS) or fatal (Switch) exception, please attach the relevant files into a GitHub issue.<br>
+
+arm11 dumps:
+- sdmc:/luma/dumps/arm11
+
+fatal exceptions:
+- sdmc:/atmosphere/crash_reports
 
 ### Neat! I'm gonna send my game to Nintendo and get cartridge of my game and I'll-
 
-Stop right there kiddo, this is for Homebrew only. This is not for releasing a real console title. I dunno, contact Nintendo if that's what you want.
+Stop right there, this is for Homebrew only. This is not for releasing a real console title. I dunno, contact Nintendo if that's what you want.
 
 ### Can this run Mari0?!
 
