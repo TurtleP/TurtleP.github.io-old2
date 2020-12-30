@@ -175,4 +175,4 @@ Once this is installed, go to the hbmenu. Run the rosalina menu combo (default `
 
 ### Nintendo Switch
 
-Since `nxlink` comes with the `switch-tools` package, all that's required it to load the netsender in hbmenu by pressing `y` and in the terminal running `nxlink -s path/to/nro` . The Switch will receive the nro and immediately run it once it's fully downloaded. Any `print` calls ran will output to this terminal's window.
+Since `nxlink` comes with the `switch-tools` package, all that's required is to load the netsender in hbmenu by pressing `y` and in the terminal running `nxlink -s path/to/nro` . The Switch will receive the nro and immediately run it once it's fully downloaded. Any `print` calls ran will output to this terminal's window.
