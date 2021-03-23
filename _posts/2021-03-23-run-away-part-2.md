@@ -59,7 +59,7 @@ My father? I've just really been trying to forget about him. It's kind of hard, 
 
 ## Next Up
 
-Come Tuesday, I think that I'll go over the progress of my novel and talk about LÖVE Potion a bit. I really want to talk about the latter in detail, but I dunno where to start. Maybe I'll do a Q&A on the Discord kind of thing ti get started.
+Come Tuesday, I think that I'll go over the progress of my novel and talk about LÖVE Potion a bit. I really want to talk about the latter in detail, but I dunno where to start. Maybe I'll do a Q&A on the Discord to get started.
 
 Until next time,
 
