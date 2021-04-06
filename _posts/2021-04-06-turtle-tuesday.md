@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Turtle Tuesday
 date: '2021-04-06'
 subtitle: The Fresh Start
