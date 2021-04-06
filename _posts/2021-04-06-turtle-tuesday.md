@@ -27,7 +27,7 @@ Dear God, Speaking of repetitive things happening -- I think that was some of th
 
 ### Storyline
 
-This is probably the least of the probelms with the old content. I don't necessarily hate the way the plot is or anything, but realistically the way certain events happen bugs me. One thing for sure is the first Chapter ended. The simple way of how it ends, which what I had is the idea, was not the proper execution. It again had that problem of feeling weirdly done because of verbiage and it came out awkward or corny.
+This is probably the least of the problems with the old content. I don't necessarily hate the way the plot is or anything, but realistically the way certain events happen bugs me. One thing for sure is the first Chapter ended. The simple way of how it ends, which what I had is the idea, was not the proper execution. It again had that problem of feeling weirdly done because of verbiage and it came out awkward or corny.
 
 Another issue was not having enough backstory for the Prologue as well. That was something I always debated whether it was good or not. It was a mere few pages long, but it did set the tone and world up nicely. I just had the feeling I should have expanded on it instead of having it the way it was. However, I'll go into more detail in a bit.
 
