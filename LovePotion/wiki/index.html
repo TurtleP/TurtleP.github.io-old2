@@ -12,12 +12,17 @@
   <link rel="stylesheet alternative" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css" title="dark">
 </head>
 <body>
+  <nav>
+    <a href="#/">English</a>
+  </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'LÖVE Potion',
       subMaxLevel: 2,
       loadSidebar: 'sidebar.md',
+      loadNavbar: 'navbar.md',
+      mergeNavbar: true,
       auto2top: true,
       executeScript: true,
       search: {
