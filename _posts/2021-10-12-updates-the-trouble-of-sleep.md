@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Updates & The Trouble Of Sleep
 subtitle: Sleep Apnea and Epilepsy
 date: '2021-10-12'
