@@ -5,9 +5,7 @@ title: 'Run Away: Part 2'
 date: '2021-03-23'
 subtitle: Electric Boogaloo
 ---
-## A Quick Note
-
-I wish that I did these blog posts more often, but it's hard to get around to. I've mostly been busy with work and personal projects, which are some things I should actually try to write about on here. Maybe tomorrow or Thursday? Next Tuesday? Bring back Turtle Tuesdays (they were a thing ages ago on an old blogspot page I had). 
+I wish that I did these blog posts more often, but it's hard to get around to. I've mostly been busy with work and personal projects, which are some things I should actually try to write about on here. Maybe tomorrow or Thursday? Next Tuesday? Bring back Turtle Tuesdays (they were a thing ages ago on an old blogspot page I had).
 
 Anyhow, you might have stumbled across this random new post. Yes I've been inactive for almost a year now, but a lot of things have happened. I really do mean *a lot*. I mean in my personal life, not so much the general issue of COVID-19 overtaking our daily lives. So, what's with the title, you may ask? Great question!
 
@@ -41,7 +39,7 @@ Eventually, I got my own place. In fact, it's a condo. He was the one who found 
 
 ## Post Mortem
 
-Well not everything can be sunshine and rainbows. It sucks, really. 
+Well not everything can be sunshine and rainbows. It sucks, really.
 
 I wish I could say going to therapy would help, but I kind of gave up on it. I tried it for a while, but it just felt like an endless cycle of repeating myself to the therapist and getting nowhere. Though.. I could switch who I talk to. I just worry that once again I'll be talking and nothing will happen or come of it.
 
@@ -61,6 +59,6 @@ My father? I've just really been trying to forget about him. It's kind of hard, 
 
 Come Tuesday, I think that I'll go over the progress of my novel and talk about LÖVE Potion a bit. I really want to talk about the latter in detail, but I dunno where to start. Maybe I'll do a Q&A on the Discord to get started.
 
-Until next time,
+Until next time, 
 
 Jeremy S. Postelnek
