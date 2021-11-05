@@ -31,7 +31,7 @@ navbar-links:
 timezone: "America/New_York"
 
 # Build settings
-theme: beautiful-jekyll-theme
+remote_theme: daattali/beautiful-jekyll@5.0.0
 plugins:
   - jekyll-feed
   - jekyll-paginate
