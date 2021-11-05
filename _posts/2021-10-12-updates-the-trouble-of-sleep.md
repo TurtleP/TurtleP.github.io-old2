@@ -5,8 +5,6 @@ title: Updates & The Trouble Of Sleep
 subtitle: Sleep Apnea and Epilepsy
 date: '2021-10-12'
 ---
-## Some Updates
-
 Well, to start I need to update my status about how things are going overall. I did kind of promise to do more "Turtle Tuesday" type things and summarize the month at the end. That's clearly going well.
 
 Jokes aside, however, I'm doing fine. I got to see some of my university friends back in July for a quick visit. That was fun. I also got to see my friends from high school. Though really, the best part was being able to see my mother.
@@ -21,7 +19,7 @@ The last thing I want to probably briefly touch on, but not explicitly talk of..
 
 ## The Sleep Stuff
 
-### Background 
+### Background
 
 You know, this is the most god damn annoying thing that keeps happening to me. These, as I call them, "sleep seizures". I can't confirm if that's what they are, either and my current neurologist doesn't/didn't believe me about it. So this part serves as an explanation and gives some context.
 
@@ -31,13 +29,13 @@ Eventually, I had figured something out to the issue and when it would happen. T
 
 ### What is It?
 
-Then I would fall asleep, right? You lie down in bed and just knock out. Except.. we're gonna go on a bit of a slope. Please note that I am basing all of this on my epilepsy as the root issue. However, I also **do not** fully know if it is the cause. 
+Then I would fall asleep, right? You lie down in bed and just knock out. Except.. we're gonna go on a bit of a slope. Please note that I am basing all of this on my epilepsy as the root issue. However, I also **do not** fully know if it is the cause.
 
-My epilepsy consists of nothing but a short burst in the frontal lobe are of the brain. If I'm not mistaken, in English, that's just the front of the top of your head area. They are *quick* like a lightning strike, but they trail off just as easily. 
+My epilepsy consists of nothing but a short burst in the frontal lobe are of the brain. If I'm not mistaken, in English, that's just the front of the top of your head area. They are *quick* like a lightning strike, but they trail off just as easily.
 
 Now, when it comes to falling asleep, it's a bit different. I'd still get that feeling where something is happening to the front of my head, but it doesn't seem to go away. This causes me to fall asleep during the episode and leave this.. buzzing sensation going on for some time. It also leaves me in a half-awake type of state in the sense that while asleep, I am fully aware that I am asleep. It's kind of confusing, but trust me it makes sense if you think about it a bit.
 
-Once half-awake or whatever you might call this, I can actually *think* what I want, Majority of the time it's legit, "ah shit here we go again" and "I need to wake up". 
+Once half-awake or whatever you might call this, I can actually *think* what I want, Majority of the time it's legit, "ah shit here we go again" and "I need to wake up".
 
 Quick recap: epileptic seizure going on, lucid awake(?), and able to think properly. No, I am not dreaming this all up.
 

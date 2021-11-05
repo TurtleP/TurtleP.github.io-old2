@@ -5,8 +5,6 @@ title: Turtle Tuesday
 date: '2021-04-06'
 subtitle: The Fresh Start
 ---
-## The Agenda
-
 So I figured that instead of doing this last Tuesday, why not start fresh next month? After all, it'll give me some extra time between the posts to collect my thoughts. Aside from that, I figure that the first Tuesday of a month will be a post like this where I share information about something *specific* that I'm passionate about and then some kind of summary at the very last day of the month. Maybe I'll add more posts between the two if I'm up to it, though. That's at least the goal now.
 
 Anyways, today I'm going to talk about the novel revamp and how that's going.
@@ -15,7 +13,7 @@ Anyways, today I'm going to talk about the novel revamp and how that's going.
 
 ### Comedy and Scenarios
 
-I'm not sure how many people even check my blog, or even the amount of people who do care about the fact I'm writing a novel. In either case, though, the point is that I've decided that it was best I start the whole thing over, save for some details. The reason that this was done is because the current story is.. okay at best I suppose? It was fine until I lost motivation again and then when I did pick it up, tried to modify the already existing data in the chapters. This really bothered me a lot because I'd look into what I could change to sound better or less "cheesy". Sometimes these things worked, but not all the time. It's fun that the novel didn't take itself seriously all the time and that's what I *absolutely* loved with it. However, too much of it can be a problem, like the following scenario: 
+I'm not sure how many people even check my blog, or even the amount of people who do care about the fact I'm writing a novel. In either case, though, the point is that I've decided that it was best I start the whole thing over, save for some details. The reason that this was done is because the current story is.. okay at best I suppose? It was fine until I lost motivation again and then when I did pick it up, tried to modify the already existing data in the chapters. This really bothered me a lot because I'd look into what I could change to sound better or less "cheesy". Sometimes these things worked, but not all the time. It's fun that the novel didn't take itself seriously all the time and that's what I *absolutely* loved with it. However, too much of it can be a problem, like the following scenario:
 
 > During Chapter 1, Serena and Esmund are going to the forest and Serena is pushing branches out the way and one of them snaps back, almost hitting Esmund behind her. She shouts how she's sorry for letting that happen and Esmund comments to himself how forgetful or clumsy she is. It's funny and quirky, but at the same time, felt a bit.. weird looking back at it now.
 
@@ -33,9 +31,9 @@ Another issue was not having enough backstory for the Prologue as well. That was
 
 ## New Overview
 
-I don't think I can really tell as much information as I'd like at the moment in the same way for the old cruft. However, I do think that I can safely say that scenarios are less awkward and can be more of an appropriate serious tone. 
+I don't think I can really tell as much information as I'd like at the moment in the same way for the old cruft. However, I do think that I can safely say that scenarios are less awkward and can be more of an appropriate serious tone.
 
-Even the Prologue itself got the extension it deserved. The original is nice, but the new one hit a bit harder. It develops the plot even more by giving the reader the background on the character in the first place. 
+Even the Prologue itself got the extension it deserved. The original is nice, but the new one hit a bit harder. It develops the plot even more by giving the reader the background on the character in the first place.
 
 > Sure a mysterious person in a forest is cool and thought provoking, but *why* are they there? It's addressed many Chapters later in the old version, but.. now it makes more sense: once for the reader and then again for the actual characters involved meeting this particular Prologue character later on.
 
@@ -51,4 +49,4 @@ Well, I tried to give a nice detailed view about the work so far without being t
 
 I think that the next post I make will be about LÖVE Potion. I still need to get some kind of Q&A session going about that on the Discord server. That or figure out what to start talking about.
 
-- TurtleP
+* TurtleP
