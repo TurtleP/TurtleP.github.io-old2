@@ -7,7 +7,8 @@ group :jekyll_plugins do
 end
 
 gem "beautiful-jekyll-theme", "5.0.0"
-gem 'jekyll-paginate'
+gem "jekyll-remote-theme"
+gem "jekyll-paginate"
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", "~> 1.2"

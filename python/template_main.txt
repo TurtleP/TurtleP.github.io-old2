@@ -1,0 +1,9 @@
+---
+layout: page
+title: VRChat Memories
+subtitle: {year}
+css: /css/photos.css
+full-width: true
+---
+
+[% include gallery.html folder="/images/VRChat/{year}" %]

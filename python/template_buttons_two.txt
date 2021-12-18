@@ -1,0 +1,9 @@
+<ul class="pagination main-pager">
+    <li class="page-item previous">
+        <a class="page-link" href="{previous}.html">{previous_text}</a>
+    </li>
+
+    <li class="page-item next">
+        <a class="page-link" href="{next}.html">{next_text}</a>
+    </li>
+</ul>
