@@ -2,46 +2,29 @@
 layout: page
 title: VRChat Memories
 subtitle: 2019 ~ Present
-css: /css/photos.css
+css: [/css/photos.css, /css/content-footer.css]
 full-width: true
 ---
-
-{% assign album_preview_one = site.data.photos.images[1].path %}
-{% assign album_preview_two = site.data.photos.images[29].path %}
-{% assign album_preview_three = site.data.photos.images[60].path %}
 
 <div class ="image-gallery">
     <div class="box">
         <div class="post-heading album-text">2019</div>
         <a href="/gallery/2019.html" title="2019 Memories">
-            <img src="{{ album_preview_one }}" class="img-gallery album-preview"/>
+            <img src="{{ site.data.photos.images[0].path }}" class="img-gallery album-preview"/>
         </a>
     </div>
 
     <div class="box">
         <div class="post-heading album-text">2020</div>
         <a href="/gallery/2020.html" title="2019 Memories">
-            <img src="{{ album_preview_two }}" class="img-gallery album-preview"/>
+            <img src="{{ site.data.photos.images[23].path }}" class="img-gallery album-preview"/>
         </a>
     </div>
 
     <div class="box">
         <div class="post-heading album-text">2021</div>
         <a href="/gallery/2021.html" title="2019 Memories">
-            <img src="{{ album_preview_three }}" class="img-gallery album-preview"/>
+            <img src="{{ site.data.photos.images[58].path }}" class="img-gallery album-preview"/>
         </a>
     </div>
 </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
