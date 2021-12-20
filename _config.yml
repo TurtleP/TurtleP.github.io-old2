@@ -6,7 +6,7 @@ email: jpostelnek@outlook.com
 
 description: Site Of a Novelist Developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://TurtleP.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 remote_theme: daattali/beautiful-jekyll@5.0.0
 
