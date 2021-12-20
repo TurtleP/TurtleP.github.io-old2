@@ -36,6 +36,7 @@ timezone: "America/New_York"
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-remote-theme
 
 paginate: 5
 

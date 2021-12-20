@@ -6,4 +6,4 @@ css: /css/photos.css
 full-width: true
 ---
 
-[% include gallery.html folder="/images/VRChat/{year}" %]
+[% include gallery.html folder="{year}" %]

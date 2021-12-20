@@ -1,3 +1,7 @@
+# This is used when a new yearly album is available
+# the script will generate /gallery/{year}.html with proper navigation buttons
+# along with the data that it should hold
+
 from pathlib import Path
 
 directories = list()
@@ -6,13 +10,7 @@ root_dir = Path().cwd().parent
 
 (root_dir / "gallery").mkdir(exist_ok=True)
 photos_path = (root_dir / "images/VRChat")
-
-page_buffer = None
-with open("template_main.txt", "r") as file:
-    page_buffer = file.read()
-
-for filepath in photos_path.glob("*"):
-    directories.append(filepath.name)
+templates_dir = "page_templates"
 
 
 def generate_buttons(index: int, year: str, years: int, buffer: str) -> str:
@@ -35,7 +33,11 @@ def generate_buttons(index: int, year: str, years: int, buffer: str) -> str:
                          next=f"/gallery/{next_year}", next_text=next_text)
 
 
-def generate_page(index, year) -> str:
+def generate_page(index: int, year: str) -> str:
+    page_buffer = None
+    with open(f"{templates_dir}/template_main.txt", "r") as file:
+        page_buffer = file.read()
+
     gallery_page = (root_dir / f"gallery/{year}.html")
     total_years = len(directories) - 1
 
@@ -44,11 +46,19 @@ def generate_page(index, year) -> str:
             "[", "{").replace("]", "}") + "\n")
 
         buttons = "two" if index == 0 or index == total_years else "three"
-        with open(f"template_buttons_{buttons}.txt", "r") as file:
+        with open(f"{templates_dir}/template_buttons_{buttons}.txt", "r") as file:
             button_data = generate_buttons(
                 index, year, total_years, file.read())
             page.write(button_data)
 
 
-for index, year in enumerate(directories):
-    generate_page(index, year)
+def main():
+    for filepath in photos_path.glob("*"):
+        directories.append(filepath.name)
+
+    for index, year in enumerate(directories):
+        generate_page(index, year)
+
+
+if __name__ == "__main__":
+    main()
