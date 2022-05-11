@@ -19,6 +19,11 @@ social-network-links:
   rss: true
   email: "jpostelnek@outlook.com"
   github: TurtleP
+  discord: TurtleP#2954
+
+# If you want your website to generate an RSS feed, provide a description
+# The URL for the feed will be https://<your_website>/feed.xml
+rss-description: The Blog of TurtleP
 
 # --- Navigation bar --- #
 
