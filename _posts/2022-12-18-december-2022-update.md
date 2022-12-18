@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: December 2022 Update
 date: '2022-12-18'
 subtitle: There's Good News (Somewhat) For Once
