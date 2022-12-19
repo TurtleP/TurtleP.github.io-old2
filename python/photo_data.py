@@ -2,7 +2,7 @@ from pathlib import Path
 
 import yaml
 
-root_dir = Path().cwd().parent
+root_dir = Path().cwd()
 photos_dir = (root_dir / "images/VRChat")
 out_dir = (root_dir / "_data/photos.yml")
 

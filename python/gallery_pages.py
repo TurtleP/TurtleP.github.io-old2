@@ -6,11 +6,11 @@ from pathlib import Path
 
 directories = list()
 
-root_dir = Path().cwd().parent
+root_dir = Path().cwd()
 
 (root_dir / "gallery").mkdir(exist_ok=True)
 photos_path = (root_dir / "images/VRChat")
-templates_dir = "page_templates"
+templates_dir = f"{root_dir}/python/page_templates"
 
 
 def generate_buttons(index: int, year: str, years: int, buffer: str) -> str:
