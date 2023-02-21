@@ -43,28 +43,6 @@ I don't think I really need to mention the content that popped up where people w
 
 I've moved over to Mastodon under a single account now. Programming updates for LÖVE Potion, streaming, personal stuff, etc are all posted on there. 
 
-## Work
-
-This one is a bit of bad news, although the only piece of it. Unfortunately, back in late October, work had decided to terminate me. It was weird, though, since I had been given so much reassurance that wouldn't happen by some individuals I spoke with prior to it.
-
-The story itself is pretty simple: I had an interview for a client that just didn't go well and then I failed to do a specific thing which I'd never done before *once* and that's somehow a big deal *and* my fault. 
-
-### Interview
-
-The interview in question didn't go well, because even though I prepared for it, wasn't prepared enough.. or something. You see, I was told by my manager that I should send him my core strengths in areas I was comfortable talking about and answering. This was done and sent to the client who responded with what topics we'd discuss. Come interview time, the interviewer hadn't seen my resumé before, which is whatever in my opinion, but he also asked questions I didn't expect him to (because I expected the client's returned questions from earlier). Some questions involved another client I worked for, which I couldn't answer (partly because it's client info and also partly because it had been about two or three years since I worked there, so I couldn't recall it too well). That manager from before? He told me if they ask something I can't answer to simply tell them that, which I did, explaining what I had just said. 
-
-On top of that, he asked me some Java questions which I could have answered, but unfortunately, due to their accent, I was unable to comprehend the question properly. I had asked them to repeat it a few times, but I didn't want to be rude by constantly asking them to repeat themselves. They asked a follow up Java question almost immediately while I was trying to figure out the first one, but I got confused as it sounded like they were related. For a bit of context, they mentioned "Java threads" and proceeded to talk about "variables, inheritance," and other things. So you could see how I got mixed up, especially if they spoke really fast.
-
-### Small Project
-
-Work put me on a small project with my last client. I was told we would be doing automation stuff, but we (me and two others, to be specific) weren't doing such immediately. We had to *design* the test cases. It wasn't only designing them, but specifically writing them in [Behavioral Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) format. Which I had **_never_** done before. We got a few examples, which I tried to follow and didn't do great on. In a call with the lead, we all said we'd learn from our mistakes based on the feedback we got back from whoever looked it over, sent our manager, and back to us - which was really negative, to put it lightly.
-
-However, after about a day I realized I didn't wish to work on this project anymore, even if it meant being on the bench and waiting. My skills were not being properly utilized and it made no sense.
-
-### The Call
-
-After all of that, my manager said to just keep brushing up on skills and wait for a new client interview. I had gotten an e-mail the next day or so from Human Resources about having a sync-up in the morning and it concerned me. I messaged them and we chatted, they told me it wasn't good news after I inquired and that's when they told me I was going to be terminated. From what I understand, they only got half of the information of what actually happened with the interview and those test cases, which I promptly told them what happened, not like it would change anything.
-
 ## Conclusion
 
 That's about everything that's happened. Lots of good things this time around, less negative things. It's a step forward, but that's life sometimes. Not everything will always be a positive situation, but on the flip side, not everything can be negative. Hoping to do another update whenever and that it's something good.
