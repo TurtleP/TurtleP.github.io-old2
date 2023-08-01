@@ -1,7 +1,7 @@
 # --- Required options --- #
 
 title: TurtleP.github.io
-author: Jeremy S. Postelnek
+author: Serena S. Postelnek
 email: jpostelnek@outlook.com
 
 description: Site Of a Novelist Developer
@@ -19,7 +19,7 @@ social-network-links:
   rss: true
   email: "jpostelnek@outlook.com"
   github: TurtleP
-  discord: TurtleP#2954
+  discord: TurtleP
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
