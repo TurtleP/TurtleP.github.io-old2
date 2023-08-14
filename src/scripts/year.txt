@@ -1,0 +1,8 @@
+<!-- .slide: data-transition="slide" -->
+
+## {album_year}
+
+<!-- .element: class="r-fit-text" -->
+
+---
+
