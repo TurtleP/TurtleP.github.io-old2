@@ -173,7 +173,6 @@ article: false
 
 ---
 
-
 <!-- .slide: data-transition="slide" -->
 
 ## 2020
@@ -373,7 +372,6 @@ article: false
 ![](/VRChat/2020/VRChat_1920x1080_2020-12-25_19-45-42.494.png)
 
 ---
-
 
 <!-- .slide: data-transition="slide" -->
 
@@ -689,7 +687,6 @@ article: false
 
 ---
 
-
 <!-- .slide: data-transition="slide" -->
 
 ## 2022
@@ -902,7 +899,6 @@ article: false
 
 ---
 
-
 <!-- .slide: data-transition="slide" -->
 
 ## 2023
@@ -986,5 +982,23 @@ article: false
 <!-- .slide: data-transition="slide" data-auto-animate -->
 
 ![](/VRChat/2023/VRChat_2023-07-30_19-33-04.856_1920x1080.png)
+
+--
+
+<!-- .slide: data-transition="slide" data-auto-animate -->
+
+![](/VRChat/2023/VRChat_2023-07-31_19-52-58.236_1920x1080.png)
+
+--
+
+<!-- .slide: data-transition="slide" data-auto-animate -->
+
+![](/VRChat/2023/VRChat_2023-08-01_19-02-35.264_1920x1080.png)
+
+--
+
+<!-- .slide: data-transition="slide" data-auto-animate -->
+
+![](/VRChat/2023/VRChat_2023-08-02_22-11-04.313_1920x1080.png)
 
 @slideend
