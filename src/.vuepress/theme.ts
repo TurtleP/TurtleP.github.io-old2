@@ -30,6 +30,7 @@ export default hopeTheme({
     medias: {
       GitHub: "https://github.com/TurtleP",
     },
+    articlePerPage: 5
   },
 
   plugins: {
