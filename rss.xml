@@ -6,10 +6,34 @@
     <link>https://TurtleP.github.io/</link>
     <description>Gamer &amp; Turtle</description>
     <language>en-US</language>
-    <pubDate>Wed, 16 Aug 2023 02:57:49 GMT</pubDate>
-    <lastBuildDate>Wed, 16 Aug 2023 02:57:49 GMT</lastBuildDate>
+    <pubDate>Tue, 12 Sep 2023 13:39:53 GMT</pubDate>
+    <lastBuildDate>Tue, 12 Sep 2023 13:39:53 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>Turtle Tuesday</title>
+      <link>https://TurtleP.github.io/posts/2023-09-12-turtle-tuesday.html</link>
+      <guid>https://TurtleP.github.io/posts/2023-09-12-turtle-tuesday.html</guid>
+      <source url="https://TurtleP.github.io/rss.xml">Turtle Tuesday</source>
+      <description>Turtle Tuesday LÖVE Potion 3.0 Pre-Release 5 It&amp;apos;s been some time since I last spoke about LÖVE Potion. If you&amp;apos;re unfamiliar with it, it&amp;apos;s a port and reimplementation of LÖVE2D for Nintendo consoles via homebrew. Currently the supported consoles include 3DS and Switch (and Wii U, t least on version 3.0). So today we&amp;apos;ll be talking about what&amp;apos;s new in the latest pre-release!</description>
+      <pubDate>Tue, 12 Sep 2023 13:38:19 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Turtle Tuesday</h1>
+<h2> LÖVE Potion 3.0 Pre-Release 5</h2>
+<p>It's been some time since I last spoke about LÖVE Potion. If you're unfamiliar with it, it's a port and reimplementation of <a href="https://love2d.org" target="_blank" rel="noopener noreferrer">LÖVE2D</a> for Nintendo consoles via homebrew. Currently the supported consoles include 3DS and Switch (and Wii U, t least on version 3.0). So today we'll be talking about what's new in the latest pre-release!</p>
+<h3> New 3DS Graphics Backend</h3>
+<p>The main portion of the new pre-release has to do with the Nintendo 3DS version. Prior to this, it was using <a href="https://github.com/devkitpro/citro2d" target="_blank" rel="noopener noreferrer">citro2d</a>. This is explicitly a 2D rendering library frontend of <a href="https://github.com/devkitpro/citro3d" target="_blank" rel="noopener noreferrer">citro3d</a>.</p>
+<p>Don't get me wrong, While citro2d has its purpose and is very useful, I had grown tired of its limitations for what I needed. I mean, sure, I had code from my friend piepie which helped with rendering n-gon polygons and other various shapes like arcs which utilized some magical math and triangle rendering with depth tricks. While this worked, it really annoyed me because it looked horrible inside the codebase. It was only as efficient as it could be, too. I also wanted it to be inline with the Switch and Wii U primitive rendering code.</p>
+<p>I then proposed the idea to DeltaV about potentially swapping out citro2d for citro3d. After all, citro2d really just used citro3d in the grand scheme of things. If memory serves, the response was something like, "it shouldn't be too hard". That gave me the motivation to start making a test project in a stripped down environment. The good news is that everything just <em>worked</em>. The bad news.. I had some work on optimizing the rendering operations, but Delta helped me work that one out later on.</p>
+<p>The new citro3d backend also let me refactor the Font class and now when users render text, can colorize their text as they could on normal LÖVE (and on Switch/Wii U).</p>
+<h3> New LÖVE Objects</h3>
+<p>Now with this new backend, I was able to safely add SpriteBatch objects and Meshes! Meshes are rather limited, though and I think the make them better I would definitely need to implement Buffers. So for now, I've released what I could do with the Mesh objects and will come back to them later when I've properly assessed how a Buffer is going to be dealt with.</p>
+<p>SpriteBatches are super useful since you can pretty much draw any number of sprites with a specified texture at once. This is more optimal than doing several calls of <code>love.graphics.draw</code> for a given texture. I don't have the other numbers on me, but on hardware, I rendered the first <strong><em>90</em></strong> tiles of Super Mario Bros.'s 1-1 at 60fps. That doesn't sound like much, but for a Nintendo 3DS it is.</p>
+<p>Likewise, Meshes allow users to create custom vertex buffers. You can set up the coordinates, texture uvs, and colors easily and draw them to the screen. They're mainly useful, I think, for 3D rendering but I could be wrong. I haven't used Meshes outside of the testing I did.</p>
+<h2> Conclusion</h2>
+<p>I'm stupidly proud of how far LÖVE Potion has come. I remember the early homebrew days where I used Ocarina of Time to launch what is now called "rednand" (redirected NAND). It used to be called "emunand" (emulated NAND) - which I think makes more sense, but that's not important. Then I found out that Videah was making LÖVE Potion and oh boy was I excited about that. I was always willing to test things for them and things rendering at like 15 FPS were quite exciting. Of course, at the time LÖVE Potion was written in C and didn't even follow what official LÖVE did (well, it did (mostly) but I mean code-wise to ensure compatability).</p>
+<p>The next pre-release is likely going to add the physics module and compressed texture loading for Switch and Wii U. After that, the video module and then we'll be considered on-par with 2.x. Only thing after that is having people make games, find bugs, and fixing them.</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Late-Night Turtle Tuesday</title>
       <link>https://TurtleP.github.io/posts/late-night-tutel-time.html</link>
