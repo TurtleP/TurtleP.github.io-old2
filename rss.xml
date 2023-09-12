@@ -6,8 +6,8 @@
     <link>https://TurtleP.github.io/</link>
     <description>Gamer &amp; Turtle</description>
     <language>en-US</language>
-    <pubDate>Tue, 12 Sep 2023 13:39:53 GMT</pubDate>
-    <lastBuildDate>Tue, 12 Sep 2023 13:39:53 GMT</lastBuildDate>
+    <pubDate>Tue, 12 Sep 2023 13:41:39 GMT</pubDate>
+    <lastBuildDate>Tue, 12 Sep 2023 13:41:39 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -16,7 +16,7 @@
       <guid>https://TurtleP.github.io/posts/2023-09-12-turtle-tuesday.html</guid>
       <source url="https://TurtleP.github.io/rss.xml">Turtle Tuesday</source>
       <description>Turtle Tuesday LÖVE Potion 3.0 Pre-Release 5 It&amp;apos;s been some time since I last spoke about LÖVE Potion. If you&amp;apos;re unfamiliar with it, it&amp;apos;s a port and reimplementation of LÖVE2D for Nintendo consoles via homebrew. Currently the supported consoles include 3DS and Switch (and Wii U, t least on version 3.0). So today we&amp;apos;ll be talking about what&amp;apos;s new in the latest pre-release!</description>
-      <pubDate>Tue, 12 Sep 2023 13:38:19 GMT</pubDate>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Turtle Tuesday</h1>
 <h2> LÖVE Potion 3.0 Pre-Release 5</h2>
 <p>It's been some time since I last spoke about LÖVE Potion. If you're unfamiliar with it, it's a port and reimplementation of <a href="https://love2d.org" target="_blank" rel="noopener noreferrer">LÖVE2D</a> for Nintendo consoles via homebrew. Currently the supported consoles include 3DS and Switch (and Wii U, t least on version 3.0). So today we'll be talking about what's new in the latest pre-release!</p>
