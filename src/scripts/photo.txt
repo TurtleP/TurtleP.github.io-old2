@@ -1,3 +1,0 @@
-<!-- .slide: data-transition="slide" -->
-
-![]({photo_path})

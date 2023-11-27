@@ -1,6 +1,11 @@
 from pathlib import Path
 
-import yaml
+import calendar
+import re
+
+import json
+
+from PIL import Image, ExifTags
 
 # TurtleP.github.io/src
 root_dir = Path().cwd() / "src"
@@ -8,61 +13,51 @@ root_dir = Path().cwd() / "src"
 # TurtleP.github.io/src/.vuepress/public/VRChat
 photos_dir = root_dir / ".vuepress/public/VRChat"
 
-output_tree = dict()
+gallery_data = dict()
+date_regex = re.compile(r"(\d{4}-\d{2}-\d{2})")
 
 
-def gather_paths():
-    for item in photos_dir.rglob("*.png"):
-        album_year = item.parent.name
-        photo_output = Path(f"/VRChat/{item.parent.name}/{item.name}")
+def get_date(path):
+    date_match = date_regex.search(path.name)
+    split = date_match.group(1).split("-")
 
-        if not album_year in output_tree:
-            output_tree[album_year] = list()
+    year = split[0]
+    month = calendar.month_name[int(split[1])]
 
-        output_tree[album_year].append(photo_output.as_posix())
-
-    build_slides()
+    return year, month
 
 
-with open(Path(__file__).parent / "year.txt", "r") as file:
-    year_format = file.read()
+for item in photos_dir.rglob("*.png"):
+    year, month = get_date(item)
 
-with open(Path(__file__).parent / "photo.txt", "r") as file:
-    photo_format = file.read()
+    if not year in gallery_data:
+        gallery_data[year] = dict()
 
+    if not month in gallery_data[year]:
+        gallery_data[year][month] = list()
 
-def build_slides():
-    current_index = 0
+    gallery_data[year][month].append(f"/VRChat/{year}/{item.name}")
 
-    output_buffers = dict()
-    for album_year in output_tree:
-        if not album_year in output_buffers:
-            add = "\n\n"
-            if album_year != "2019":
-                add = "---\n\n"
+MONTH_HTML = "<h2>{title}</h2>"
+PHOTOS_DIV = """
+<div class="image-preview">
+{content}</div>
 
-            output_buffers[
-                album_year
-            ] = f"{add}{year_format.format(album_year=album_year)}"
+"""
+PHOTO_SRC = """  <img src="{url}"/>\n"""
 
-            current_index = 0
+photo_buffer = ""
+buffer = ""
 
-        for photo_path in output_tree[album_year]:
-            output_buffers[album_year] += photo_format.format(photo_path=photo_path)
-            current_index += 1
+for year in gallery_data:
+    with open(photos_dir / f"gallery_{year}.txt", "w") as file:
+        for month in gallery_data[year]:
+            buffer += MONTH_HTML.format(title=month)
+            for photo_path in gallery_data[year][month]:
+                photo_buffer += PHOTO_SRC.format(url=photo_path)
 
-            add = "\n--\n\n"
-            if current_index == len(output_tree[album_year]):
-                add = "\n"
+            buffer += PHOTOS_DIV.format(content=photo_buffer)
+            photo_buffer = ""
 
-            output_buffers[album_year] += add
-
-    with open("test.md", "w") as file:
-        file.write("@slidestart")
-        for album_year in output_buffers:
-            file.write(output_buffers[album_year])
-        file.write("@slideend")
-
-
-if __name__ == "__main__":
-    gather_paths()
+        file.write(buffer)
+        buffer = ""

@@ -7,6 +7,10 @@ export default navbar([
     icon: "fa-brands fa-paypal",
     link: "https://paypal.me/TurtleP"
   },
-  "/gallery/",
+  {
+    text: "VRChat Memories",
+    icon: "fa-solid fa-images",
+    link: "/gallery/2019.md",
+  },
   "/about/"
 ]);

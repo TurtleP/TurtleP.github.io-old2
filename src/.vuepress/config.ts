@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
+import { redirectPlugin } from "vuepress-plugin-redirect";
 
 export default defineUserConfig({
   base: "/",
@@ -9,6 +10,14 @@ export default defineUserConfig({
   description: "Gamer & Turtle",
 
   theme,
+
+  plugins: [
+    redirectPlugin({
+      "config": {
+        "gallery/index.html": "gallery/2019.html"
+      }
+    })
+  ]
 
   // Enable it with pwa
   // shouldPrefetch: false,
