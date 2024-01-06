@@ -54,7 +54,7 @@ def setup_content_buffers(path) -> tuple[str, str]:
     if not month in content[year]:
         content[year][month] = list()
 
-    content[year][month].append(f"  <img src='{path}' />\n")
+    content[year][month].append(f"  <img src='/VRChat/{year}/{path.name}' />\n")
 
     return year, month
 
