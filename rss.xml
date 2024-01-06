@@ -6,10 +6,30 @@
     <link>https://TurtleP.github.io/</link>
     <description>Gamer &amp; Turtle</description>
     <language>en-US</language>
-    <pubDate>Mon, 27 Nov 2023 01:45:45 GMT</pubDate>
-    <lastBuildDate>Mon, 27 Nov 2023 01:45:45 GMT</lastBuildDate>
+    <pubDate>Sat, 06 Jan 2024 17:13:34 GMT</pubDate>
+    <lastBuildDate>Sat, 06 Jan 2024 17:13:34 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title></title>
+      <link>https://TurtleP.github.io/scripts/templates/content.html</link>
+      <guid>https://TurtleP.github.io/scripts/templates/content.html</guid>
+      <source url="https://TurtleP.github.io/rss.xml"></source>
+      <description>{content}</description>
+      <pubDate>Sat, 06 Jan 2024 17:09:21 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 month=""> </h2>
+<div class="image-preview">
+{content}</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title></title>
+      <link>https://TurtleP.github.io/scripts/templates/style.html</link>
+      <guid>https://TurtleP.github.io/scripts/templates/style.html</guid>
+      <source url="https://TurtleP.github.io/rss.xml"></source>
+      <description>h2 { border-bottom: none; text-align: center; } .vp-page-title { text-align: center; padding-bottom: 0 } .image-preview { display: flex; justify-content: space-evenly; align-ite...</description>
+      <pubDate>Sat, 06 Jan 2024 17:09:21 GMT</pubDate>
+    </item>
     <item>
       <title>VRChat Memories</title>
       <link>https://TurtleP.github.io/gallery/</link>
