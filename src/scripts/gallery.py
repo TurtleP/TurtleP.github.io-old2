@@ -28,13 +28,13 @@ def read_templates() -> None:
     global PAGE_TEMPLATE
     global STYLE_TEMPLATE
 
-    with open(TEMPLATES_DIR / "content.md", "r") as file:
+    with open(TEMPLATES_DIR / "content.txt", "r") as file:
         CONTENT_TEMPLATE = file.read()
 
-    with open(TEMPLATES_DIR / "page.md", "r") as file:
+    with open(TEMPLATES_DIR / "page.txt", "r") as file:
         PAGE_TEMPLATE = file.read()
 
-    with open(TEMPLATES_DIR / "style.md", "r") as file:
+    with open(TEMPLATES_DIR / "style.txt", "r") as file:
         STYLE_TEMPLATE = file.read()
 
 
