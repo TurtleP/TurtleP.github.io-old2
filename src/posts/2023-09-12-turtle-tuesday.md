@@ -1,6 +1,8 @@
 ---
 date: 2023-09-12
-tag: turtle-tuesday
+tag:
+  - turtle-tuesday
+  - lovepotion
 ---
 
 # Turtle Tuesday
@@ -8,7 +10,7 @@ tag: turtle-tuesday
 It's been some time since I last spoke about LÖVE Potion. If you're unfamiliar with it, it's a port and reimplementation of [LÖVE2D](https://love2d.org) for Nintendo consoles via homebrew. Currently the supported consoles include 3DS and Switch (and Wii U, t least on version 3.0). So today we'll be talking about what's new in the latest pre-release!
 
 ### New 3DS Graphics Backend
-The main portion of the new pre-release has to do with the Nintendo 3DS version. Prior to this, it was using [citro2d](https://github.com/devkitpro/citro2d). This is explicitly a 2D rendering library frontend of [citro3d](https://github.com/devkitpro/citro3d). 
+The main portion of the new pre-release has to do with the Nintendo 3DS version. Prior to this, it was using [citro2d](https://github.com/devkitpro/citro2d). This is explicitly a 2D rendering library frontend of [citro3d](https://github.com/devkitpro/citro3d).
 
 Don't get me wrong, While citro2d has its purpose and is very useful, I had grown tired of its limitations for what I needed. I mean, sure, I had code from my friend piepie which helped with rendering n-gon polygons and other various shapes like arcs which utilized some magical math and triangle rendering with depth tricks. While this worked, it really annoyed me because it looked horrible inside the codebase. It was only as efficient as it could be, too. I also wanted it to be inline with the Switch and Wii U primitive rendering code.
 
@@ -27,4 +29,3 @@ Likewise, Meshes allow users to create custom vertex buffers. You can set up the
 I'm stupidly proud of how far LÖVE Potion has come. I remember the early homebrew days where I used Ocarina of Time to launch what is now called "rednand" (redirected NAND). It used to be called "emunand" (emulated NAND) - which I think makes more sense, but that's not important. Then I found out that Videah was making LÖVE Potion and oh boy was I excited about that. I was always willing to test things for them and things rendering at like 15 FPS were quite exciting. Of course, at the time LÖVE Potion was written in C and didn't even follow what official LÖVE did (well, it did (mostly) but I mean code-wise to ensure compatability).
 
 The next pre-release is likely going to add the physics module and compressed texture loading for Switch and Wii U. After that, the video module and then we'll be considered on-par with 2.x. Only thing after that is having people make games, find bugs, and fixing them.
-

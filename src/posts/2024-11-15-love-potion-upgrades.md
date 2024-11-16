@@ -1,3 +1,8 @@
+---
+date: 2024-11-15
+tag: lovepotion
+---
+
 # Fixes, Features, and a Little LÖVE
 
 Hello everyone, hope you're doing well! It's been a minute since I posted anything noteworthy to my blog, but here we go. Let's talk about something I've been cooking for a little over half a year now: the newest iteration of LÖVE Potion, 3.1.0. While it's still not fully done, I did want to express the excitement of the new changes and mountain of fixes to the codebase that should make *you* excited as well. Seriously.
@@ -14,9 +19,9 @@ Fast forward to today, almost everything from 3.0 is reimplemented and the codeb
 
 ## Testing Grounds
 
-One of the major things that I found out was that 3.0 had a lot of issues. Not like GitHub Issues, but actual code problems that I needed to fix. It was definitely more performant than 2.4, but we're talking things like expected versus actual results of function calls. 
+One of the major things that I found out was that 3.0 had a lot of issues. Not like GitHub Issues, but actual code problems that I needed to fix. It was definitely more performant than 2.4, but we're talking things like expected versus actual results of function calls.
 
-Luckily, user [ellraiser](https://github.com/ellraiser) had started making a LÖVE focused [test suite](https://github.com/ellraiser/love-test) that ran all function calls to do exactly what I needed. It was an invaluable resource to validate the code I'd written so far and be absolutely sure things were exactly like the official version of LÖVE. One notable example was that `File:read()` had been incorrect and only pushed one of the return values to the Lua stack. It turned out that another function pushed multiple values, but I only pushed a single one. 
+Luckily, user [ellraiser](https://github.com/ellraiser) had started making a LÖVE focused [test suite](https://github.com/ellraiser/love-test) that ran all function calls to do exactly what I needed. It was an invaluable resource to validate the code I'd written so far and be absolutely sure things were exactly like the official version of LÖVE. One notable example was that `File:read()` had been incorrect and only pushed one of the return values to the Lua stack. It turned out that another function pushed multiple values, but I only pushed a single one.
 
 The last time I ran the suite was on April 4, 2024. Most if not all tests that could run passed which was awesome. The tests did not run any graphics, audio, physics, or keyboard cases (simply because none of those modules were implemented yet). Prior to this day, there were some filesystem-related failures, which took me some time to debug, but ultimitely the baseline had been set once everything was running smoothly (except Wii U hashing stuff - blame it being big endian for that).
 
@@ -34,7 +39,7 @@ For those curious, here are the overall rankings of the top 3 functions that ran
   - love.sound.SoundData: 0.814s
   - love.filesystem.getDirectoryItems: 0.687s
   - love.filesystem.File: 0.499s
-  
+
 ## New Features
 
 ### Remote Debugging
@@ -66,6 +71,3 @@ A massive undertaking, to some degree. LÖVE Potion 3.0 for Nintendo 3DS current
 LÖVE Potion 3.1.0 is shaping up to be a massive leap forward in performance, usability, and features. While it’s not fully done yet, I’m thrilled about how far it has come and grateful for the support of the homebrew community. If you’re interested in testing, contributing, or just trying out the new features, stay tuned for the release or check out the GitHub repository! Let me know your thoughts — every bit of feedback helps make LÖVE Potion even better.
 
 Thank you again to the following people who have supported and helped me: TuxSH, ellraiser, piepie62, mtheall, fincs, DeltaV, Nawias, the community for LÖVE, and the original inspiration to keep the project going all these years - Videah.
-
-  
-

@@ -1,5 +1,8 @@
 ---
 date: 2022-12-18
+tag:
+  - lovepotion
+  - kingdom-of-erlain
 ---
 
 # Good News, Everyone!
@@ -40,7 +43,7 @@ Now, to be fair, it's not just vtuber Twitter. There's probably a ton of account
 
 I don't think I really need to mention the content that popped up where people were basically horny-posting pictures of their vtuber models. I'm not on vtuber Twitter - nor Twitter in general - to see that kind of content. Sure, sexual content sells and drives people to do stuff, but it's just sad to see if you have to pull that kind of stuff to gain an audience. I'm not sure if this or people constantly complaining is worse in terms of being an attention seeker, in all honestly. Regardless, if they want to  make that kind of content, by all means, do it, but I myself don't really approve of it.
 
-I've moved over to Mastodon under a single account now. Programming updates for LÖVE Potion, streaming, personal stuff, etc are all posted on there. 
+I've moved over to Mastodon under a single account now. Programming updates for LÖVE Potion, streaming, personal stuff, etc are all posted on there.
 
 ## Conclusion
 
