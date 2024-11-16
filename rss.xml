@@ -6,8 +6,8 @@
     <link>https://TurtleP.github.io/</link>
     <description>Gamer &amp; Turtle</description>
     <language>en-US</language>
-    <pubDate>Sat, 16 Nov 2024 04:04:13 GMT</pubDate>
-    <lastBuildDate>Sat, 16 Nov 2024 04:04:13 GMT</lastBuildDate>
+    <pubDate>Sat, 16 Nov 2024 04:09:56 GMT</pubDate>
+    <lastBuildDate>Sat, 16 Nov 2024 04:09:56 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -16,7 +16,7 @@
       <guid>https://TurtleP.github.io/posts/2024-11-15-love-potion-upgrades.html</guid>
       <source url="https://TurtleP.github.io/rss.xml">Fixes, Features, and a Little LÖVE</source>
       <description>Fixes, Features, and a Little LÖVE Hello everyone, hope you&amp;apos;re doing well! It&amp;apos;s been a minute since I posted anything noteworthy to my blog, but here we go. Let&amp;apos;s talk about something I&amp;apos;ve been cooking for a little over half a year now: the newest iteration of LÖVE Potion, 3.1.0. While it&amp;apos;s still not fully done, I did want to express the excitement of the new changes and mountain of fixes to the codebase that should make you excited as well. Seriously.</description>
-      <pubDate>Sat, 16 Nov 2024 04:03:35 GMT</pubDate>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Fixes, Features, and a Little LÖVE</h1>
 <p>Hello everyone, hope you're doing well! It's been a minute since I posted anything noteworthy to my blog, but here we go. Let's talk about something I've been cooking for a little over half a year now: the newest iteration of LÖVE Potion, 3.1.0. While it's still not fully done, I did want to express the excitement of the new changes and mountain of fixes to the codebase that should make <em>you</em> excited as well. Seriously.</p>
 <h2> A Clean Slate</h2>
