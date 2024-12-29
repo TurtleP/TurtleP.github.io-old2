@@ -1,0 +1,51 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import photos from "../../gallery.json";
+
+import MarkdownIt from "markdown-it";
+export const md = new MarkdownIt();
+
+import GalleryPhoto from "../../components/GalleryPhoto.astro";
+import PaginationControls from "../../components/PaginationControls.astro";
+
+export function transformBURBName(users: Array<string>) {
+  const options = ["Uzuem", "Burb", "Uzume"]
+  return users.map((user) => {
+    if (user === "Uzume") {
+      return options[Math.floor(Math.random() * options.length)];
+    }
+    return user;
+  });
+}
+
+export const gallery = Object.entries(photos).map(([year, images]) => ({
+    year,
+    images: images.map((image) => ({
+        path: image.path,
+        comment: md.render(image.comment),
+        users: transformBURBName(image.users),
+    })),
+}));
+
+export function getStaticPaths({ paginate }) {
+    return paginate(gallery, { pageSize: 1 });
+}
+
+const { page } = Astro.props;
+const current = gallery[page.currentPage - 1];
+---
+
+<Layout>
+  {
+    <h2 class="text-2xl font-semibold text-center text-white dark:text-gray-400 py-4">{current.year}</h2>
+    <section class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-4 px-4">
+      {
+        current.images.map((image) => (
+          <GalleryPhoto path={image.path} comment={image.comment} users={image.users} />
+        ))
+      }
+    </section>
+  }
+
+  <PaginationControls page={page} />
+</Layout>

@@ -1,0 +1,54 @@
+---
+const { path, year, comment, users } = Astro.props;
+import UserTag from "./UserTag.astro";
+---
+
+<link rel="stylesheet" href="/gallery/styles.css" />
+
+<script>
+  document.querySelectorAll(".zoom-photo").forEach((photo) => {
+    photo.addEventListener("click", () => {
+      if (document.fullscreenElement) {
+        // Exit fullscreen if the photo is already in fullscreen
+        document.exitFullscreen();
+      } else {
+        // Enter fullscreen when photo is clicked
+        if (photo.requestFullscreen) {
+          photo.requestFullscreen();
+        }
+      }
+    });
+  });
+</script>
+
+<div
+  class="relative rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105 zoom-photo"
+>
+  <img
+    src={path}
+    alt={`Photo from ${year}`}
+    class="w-full h-full object-cover max-w-full"
+    loading="lazy"
+  />
+  <!-- {
+    comment && (
+      <div class="text-white justify-center items-center flex gap-1">
+        <i class="fas fa-comment drop-shadow-lg shadow-black" />
+      </div>
+    )
+  } -->
+  {
+    (comment != "" || users.length > 0) && (
+      <div class="absolute inset-0 bg-black bg-opacity-60 text-white flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+        {comment && <div class="text-lg text-center px-4" set:html={comment} />}
+        {users && (
+          <div class="absolute bottom-2 left-2 flex flex-wrap gap-1">
+            {users.map((user: string) => (
+              <UserTag name={user} />
+            ))}
+          </div>
+        )}
+      </div>
+    )
+  }
+</div>

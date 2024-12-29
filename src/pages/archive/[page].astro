@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+import { getCollection } from "astro:content";
+import PostCard from "../../components/PostCard.astro";
+import PaginationControls from "../../components/PaginationControls.astro";
+
+export async function getStaticPaths({ paginate }) {
+  const posts = (await getCollection("blog")).sort(
+    (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+  );
+  return paginate(posts, { pageSize: 4 });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout>
+  <!-- Page-Specific Content goes here -->
+  <section class="max-w-4xl mx-auto py-4 px-4 justify-center items-center">
+    {
+      page.data.length > 0 ? (
+        page.data.map((post) => (
+          <PostCard
+            title={post.data.title}
+            excerpt={post.data.excerpt}
+            date={post.data.date}
+            slug={post.id}
+            tags={post.data.tags}
+          />
+        ))
+      ) : (
+        <p class="text-center text-gray-600 dark:text-gray-400">
+          No posts found. Check back later.
+        </p>
+      )
+    }
+  </section>
+
+  <PaginationControls page={page} />
+</Layout>

@@ -1,0 +1,50 @@
+---
+const { title, excerpt, date, slug, tags } = Astro.props;
+import Tag from "./Tag.astro";
+---
+
+<article
+    class="relative bg-white dark:bg-dark_modern rounded-lg overflow-hidden m-3"
+>
+    <!-- Content Section -->
+    <div class="relative p-6 h-auto">
+        <!-- Date -->
+        <p class="text-gray-500 dark:text-gray-400 text-sm mb-2">
+            {
+                new Date(date).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                })
+            }
+        </p>
+
+        <!-- Title -->
+        <h2 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+            {title}
+        </h2>
+
+        <!-- Excerpt -->
+        <p class="text-gray-600 dark:text-gray-400 mb-4 text-lg">
+            {excerpt}
+        </p>
+
+        {
+            tags && tags.length > 0 && (
+                <div class="mb-4">
+                    {tags.map((tag: string) => (
+                        <Tag name={tag} />
+                    ))}
+                </div>
+            )
+        }
+
+        <!-- Read More Button -->
+        <a
+            href={`/posts/${slug}`}
+            class="text-seafoam hover:underline font-medium text-sm inline-flex items-center"
+        >
+            Read More
+        </a>
+    </div>
+</article>

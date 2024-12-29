@@ -1,0 +1,41 @@
+---
+import Tag from "../components/Tag.astro";
+import { render } from "astro:content";
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<!-- Title -->
+<h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+    {post.data.title}
+</h1>
+
+<!-- Date -->
+<p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
+    {
+        new Date(post.data.date).toLocaleDateString("en-US", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+        })
+    }
+</p>
+
+<!-- Tags -->
+{
+    post.data.tags && post.data.tags.length > 0 && (
+        <div class="mb-4">
+            {post.data.tags.map((tag: string) => (
+                <Tag name={tag} />
+            ))}
+        </div>
+    )
+}
+
+<!-- Body -->
+<div
+    class="prose dark:prose-dark max-w-prose text-gray-600 dark:text-gray-400 text-lg mb-4"
+>
+    <Content />
+</div>

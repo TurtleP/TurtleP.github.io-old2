@@ -1,0 +1,23 @@
+<script>
+    const toggle = document.querySelector(".theme-switch");
+
+    toggle?.addEventListener("click", () => {
+        const theme = localStorage.getItem("theme");
+        const setTheme = theme === "dark" ? "light" : "dark";
+
+        document.documentElement.setAttribute("data-theme", setTheme);
+        localStorage.setItem("theme", setTheme);
+    });
+</script>
+
+<div class="theme-switch flex flex-col justify-center">
+    <input type="checkbox" name="light-switch" class="light-switch sr-only" />
+    <label class="relative cursor-pointer" for="light-switch">
+        <div class="dark:hidden">
+            <i class="fas fa-sun"></i>
+        </div>
+        <div class="hidden dark:block">
+            <i class="fas fa-moon"></i>
+        </div>
+    </label>
+</div>

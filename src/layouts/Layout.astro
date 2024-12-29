@@ -1,0 +1,137 @@
+---
+import { config } from "../config";
+const { title, subtitle, profileImage, links, favicon } = config;
+
+import ThemeToggle from "../components/ThemeToggle.astro";
+
+import SocialMedia from "../components/SocialMedia.astro";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+const currentPath = Astro.url.pathname;
+
+function isActiveLink(linkHref: string) {
+  if (currentPath.includes("/posts/")) {
+    return linkHref === "archive";
+  }
+
+  return linkHref === ""
+    ? currentPath === "/"
+    : currentPath.startsWith(`/${linkHref}`);
+}
+
+function generateTitle(link: { name: string; href: string }) {
+  // Use the link's name as the default title
+  return link.name || link.href.charAt(0).toUpperCase() + link.href.slice(1);
+}
+
+function getPageTitle() {
+  const currentPath = Astro.url.pathname;
+
+  // Find the link that matches the current path
+  const link = config.links.find((link) =>
+    new RegExp(link.match).test(currentPath),
+  );
+
+  if (link) {
+    return generateTitle(link); // Generate the title dynamically
+  }
+
+  return config.title; // Fallback to the main title
+}
+
+const pageTitle = getPageTitle();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/jpg" href={favicon} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={title}
+      href={new URL("rss.xml", Astro.site)}
+    />
+    <script is:inline>
+      document.documentElement.setAttribute(
+        "data-theme",
+        localStorage.theme || "light",
+      );
+    </script>
+    <title>
+      {title} | {pageTitle}
+    </title>
+  </head>
+
+  <body class="bg-light dark:bg-dark_modern">
+    <div class="flex flex-col min-h-screen">
+      <!-- Main Section (Profile Section, Navbar, etc.) -->
+      <section class="pt-8 pb-6 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center sm:space-x-6 space-y-4 sm:space-y-0"
+        >
+          <img
+            src={profileImage}
+            alt="Profile"
+            class="w-32 h-32 rounded-full border-4 border-seafoam shadow-lg"
+          />
+          <div
+            class="flex flex-col justify-center items-center items-start text-center sm:text-left"
+          >
+            <h1
+              class="text-4xl font-semibold text-gray-900 dark:text-white leading-tight"
+            >
+              {title}
+            </h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mt-2">
+              {subtitle}
+            </p>
+            <div
+              id="social-media"
+              class="mt-2 flex justify-center items-center gap-x-4 text-m text-gray-900 dark:text-white"
+            >
+              <ThemeToggle />
+              <SocialMedia
+                link="https://github.com/TurtleP"
+                icon="fab fa-github"
+              />
+              <SocialMedia
+                link="https://bsky.app/profile/serenafye.bsky.social"
+                icon="fa-brands fa-bluesky"
+              />
+              <SocialMedia link="/rss.xml" icon="fas fa-rss" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Links (Navbar) -->
+      <nav class="flex justify-center space-x-8 py-4">
+        {
+          links.map((link) => (
+            <a
+              href={`/${link.href}`}
+              class={`text-lg font-medium dark:text-white relative ${
+                isActiveLink(link.href) ? "underline" : "hover:underline"
+              }`}
+            >
+              {link.name}
+            </a>
+          ))
+        }
+      </nav>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer
+        class="flex align-middle justify-center items-center space-x-4 py-6 mt-auto bg-gray-100 dark:bg-dark_footer transition-colors text-gray-600 dark:text-gray-400"
+      >
+        &#169; {new Date().getFullYear()} TurtleP
+      </footer>
+    </div>
+  </body>
+</html>

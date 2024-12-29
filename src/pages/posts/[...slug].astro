@@ -1,0 +1,55 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
+
+import { getCollection } from "astro:content";
+export async function getStaticPaths() {
+    const posts = await getCollection("blog");
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+---
+
+<script>
+    const backToTop = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTop?.classList.remove("opacity-0", "invisible");
+        } else {
+            backToTop?.classList.add("opacity-0", "invisible");
+        }
+    });
+
+    backToTop?.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+<Layout>
+    <div class="flex justify-center relative">
+        <article class="w-full max-w-4xl py-16 px-4 relative">
+            <a
+                href="javascript:history.back()"
+                class="text-seafoam hover:underline font-medium text-sm inline-flex items-center mb-4"
+            >
+                <i class="fas fa-arrow-left mr-2"></i> Back
+            </a>
+
+            <BlogPostLayout post={post} />
+
+            <!-- Back to Top Button -->
+            <button
+                id="back-to-top"
+                class="absolute right-4 bottom-8 text-seafoam hover:opacity-75 transition-all duration-300 opacity-0 invisible bg-white dark:bg-dark_modern w-10 h-10 rounded-full shadow-lg flex items-center justify-center"
+            >
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </article>
+    </div>
+</Layout>

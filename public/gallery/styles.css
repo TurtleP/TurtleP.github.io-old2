@@ -1,0 +1,23 @@
+/* Base styles for the photo */
+.photo-container {
+  position: relative;
+}
+
+.zoom-photo:hover {
+  cursor: zoom-in;
+}
+
+/* Fullscreen effect with darkened background */
+.zoom-photo:fullscreen {
+  display: block;
+  position: fixed;
+  cursor: zoom-out;
+  top: calc(100vw - 25vw);
+  left: calc(100vw - 25vw);
+  width: calc(100vh - 25vh);
+  height: calc(100vh - 25vh);
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Darkened background */
+  z-index: 1000;
+}
